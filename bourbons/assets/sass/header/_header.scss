@@ -1,0 +1,61 @@
+ header {
+ 	@include background(#a8ad00);
+ 	@include border-width(1px);
+ 	@include border-style(solid);
+ 	@include border-color(#cfcfcf);
+  h1 {
+  	float: left;
+  }
+
+  .nav {
+  	float: left;
+
+  	li {
+  		@include margin(50px 13px 53px);
+  		@include inline-block;
+    a{
+    	@include inline-block;
+    	color: $font_color;
+      font-size: em($nove-font);
+      text-decoration: none;
+  		}
+  	}
+  }
+
+  .donate {
+  	@include margin(42px 32px null null);
+  	float: right;
+  	  .button-group {
+  		  @include button(pill, #fff);
+  	  }
+  	  button {
+  	  	@include margin(5px null null null);
+        color: #750e2b;
+        font-size: 16px;
+        font-weight: 700;
+  	  }
+    }
+  }
+
+#{$all-buttons} {
+  @include background(linear-gradient(#fff, #e9e3e2));
+  @include border-width(0);
+}
+
+/*banner styling*/
+.banner {
+	@include size(100% null);
+	@include position(relative);
+	img{
+		@include size(100% null);
+	}
+	.banner-content {
+		@include position(absolute, null null 70px 35px);
+		text-align: center;
+		h2{
+			color: $font_color;
+      font: 700 48px 'Indie Flower', cursive;
+      text-shadow: 0px 1px 0.99px rgba(0, 0, 0, 0.75);
+		}
+	}
+}

@@ -1,0 +1,508 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+/*--------- Header Style start ------------*/
+header{ 
+    padding-bottom: 1px;
+    background-color: #ffffff;
+}
+header h1{
+    margin-top: 48px;
+    margin-left: 26px;
+    display: inline-block;
+}
+
+.search{
+    margin-top: 22px;
+    display: inline-block;
+    float: right;
+}
+.search .search-site { margin-left: 53px; }
+.search label{
+    font: 300 14px / 18.634px OpenSans; 
+    color: #474b51;
+} 
+.input-box{
+    padding:  10px 12px 10px 47px;
+    border: 0px;
+    border-right: 1px solid #666666;
+    font: 300 16px / 18.634px OpenSans;
+    
+}
+.input-group{
+    border:1px solid #666666;
+    margin-top: 3px;
+    margin-right: 49px;
+}   
+.input-group img{ padding: 0px 5px 2px 2px; }
+.about-social{ 
+    width: 90%;
+    margin: 18px auto 0px; 
+ }
+.about-social ul{
+    display: inline-block;
+}
+.about-social li{
+    padding-right: 12px;
+    display: inline-block;
+}
+.about-social li a{
+    font: 700 22px / 18.634px OpenSans;
+    color: #474b51;
+    text-decoration: none;
+    vertical-align: bottom;
+}
+.line-nav{ margin-top: 12px; }
+.line-nav img{
+    width: 95%;
+    margin: 0 19px;
+}
+.nav-anchor-locatin .active {
+    color: #1349ac;
+}
+.highlight{
+    font-weight: 600;
+}
+.about-social:before{
+   /* content: "";
+    width: 96%;
+    height: 1px;
+    position: absolute;
+    top: 113px;
+    left: 20px;
+    background-color: #666666;*/
+}
+.social{
+    display: inline-block;
+}
+.social a{
+    padding-left: 4px;
+    font: 300 18px / 18.634px OpenSans;
+    color: #474b51;
+    text-decoration: none;
+    vertical-align: bottom;
+}
+.color-bar{ margin-top: 5px; }
+.color-bar img{
+    width: 100%;
+    height: 3px;
+}
+header nav{ margin: 10px 10px 10px 34px; }
+header nav li{
+    padding-right: 24px;
+    display: inline-block;
+}
+header nav a{
+    font: 300 16px / 26px OpenSans;
+    color: #474b51;
+    text-decoration: none;
+}
+header nav .active{ color: #1349ac; }
+/*--------- Header Style End ------------*/
+/*--------- page content Style start ------------*/
+.content-maine{
+    width: 92%;
+    margin: 0 auto;
+    background-color: rgba(128, 128, 128, 0.19);
+}
+.banner img{
+    width: 100%;
+}
+.page-path{
+    padding-top: 26px;
+    padding-left: 37px;
+}
+.page-path a{
+    color: #474b51;
+    font: 600 16px / 26px OpenSans;
+    text-decoration: none;
+}
+.page-path .active,
+.progressiv-idea .active,
+.biofuels-project .active{ color: #1349ac; }
+.progressiv-idea .active:after{
+    content: '';
+    width: 67px;
+    height: 3px;
+    position: absolute;
+    top: 46px;
+    left: 22px;
+    background: url(assest/images/nav-color-bar-copy.png);
+}
+.biofuels-project .active:after{
+    content: '';
+    width: 67px;
+    height: 3px;
+    position: absolute;
+    top: 46px;
+    left: 378px;
+    background: url(assest/images/nav-color-bar-copy.png);
+}
+.content-maine h1{ 
+    padding-top: 26px;
+    margin-bottom: 4px;
+    margin-left: 38px;
+    color: #474b51;
+    font: 600 33.45px / 33.944px OpenSans;
+}
+.top-page-content{
+    padding-bottom: 10px;
+    background-color: white;
+}
+.blue-bar img{
+    width: 92%;
+    height: 7px;
+    margin: 0px 35px;
+}
+/*------------- content box style start --------*/
+.box{
+    padding-top: 25px;
+    padding-bottom: 28px;
+    margin: 30px 35px;
+    position: relative;
+    background-color: white;
+}
+.discover-inspires,
+.risk-taker,
+.gm-by-number{ padding-top: 0px; }
+.content-box h2{
+    padding: 40px 30px 13px;
+    color: #1349ac;
+    font: 400 21.37px OpenSans;
+}
+.content-box p{
+    padding-left: 31px;
+    color: #474b51;
+    font: 300 18px / 26px OpenSans;
+}
+.content-box{
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+.content-box img{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 24px;
+}
+.content-box ul,
+.content-box li{
+    display: inline-block;
+}
+.content-box h3{
+    margin-top: 45px;
+    margin-bottom: 9px;
+    color: #474b51;
+    font: 700 18px / 24px OpenSans;
+}
+.content-box .btn-box{
+    text-decoration: none;
+    padding: 12px;
+    color: #ffffff;
+    font: 600 18px / 47.944px OpenSans;
+    background-color: #0099cc;
+}
+.content-box ul{ margin-left: 25px; }
+.content-box iframe{
+    width: 90%;
+    height: 315px;
+    margin-top: 38px;
+    margin-left: 31px;
+
+}
+.content-box .quat{
+    padding: 15px 29px 5px 29px;
+    color: #003399;
+    font-style: italic;
+}
+.risk-take{ margin-top: 46px; }
+.content-box span{
+    color: #1349ac;
+    font-weight: bold;
+    font-style: italic
+}
+ .content-box .para-color{
+    color: #1349ac;
+     font-style: italic;
+}
+.progressiv-idea li,
+.biofuels-project li{ 
+    display: inline-block; 
+    padding-right: 100px;
+}
+.progressiv-idea ul,
+.biofuels-project ul{
+    margin-left: 25px;
+}
+.box a{ 
+    color: #474b51;
+    font: 600 16px / 18.634px OpenSans;
+    text-decoration: none;
+}
+.biofuels-project li{ display: inline-block; }
+.progressiv-idea ul:after,
+.biofuels-project ul:after{
+    content: '';
+    width: 95%;
+    height: 2px;
+    position: absolute;
+    top: 56px;
+    left: 21px;
+    background-color: #ccc;
+}
+/*--------------- start css for learn-more option ---------*/
+.anchor-group img{
+    width: 8px;
+    margin: 0px 0px 0px -8px;
+}
+.anchor-group .learn-more{ margin-left: 34px; }
+.content-box .learn-more:after{
+    content: '';
+    width: 75px;
+    height: 1px;
+    position: absolute;
+    right: 303px;
+    bottom: 42px;
+    background-color: #474b51;
+
+}
+.anchor-group a{ font-weight: 500;}
+/*---------------end css for learn-more option ---------*/
+/*---------------start nav anchor group-----------------*/
+.nav-anchor-group img{
+    width: 12px;
+    margin: 0px 0px 0px -4px;
+    height: 8px; 
+}
+.nav-anchor-locatin img{
+    width: 12px;
+    margin: 4px 0px 0px 2px;
+    height: 8px; 
+}
+.about-social .active{
+    color: #1349ac;
+}
+/*---------------end nav anchor group-----------------*/
+/*------------- content box style end --------*/
+/*------------- image content box style start --------*/
+.img-content-box{
+    width: 32%;
+    margin-left: 6px;
+    position: relative;
+    display: inline-block;
+}
+.img-content-box img{
+    width: 100%;
+    height: 225px;
+}
+.img-info{
+    width: 88%;
+    height: 130px;
+    padding: 9px;
+    position: absolute;
+    top: 71px;
+    left: 6px;
+    background: white;
+}
+.img-info h3{
+    margin-bottom: 6px;
+    color: #1349ac;
+    font-size: 17px;
+}
+.img-info p{ color: #474b51; }
+.arrow-content{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: #0099cc;
+}
+.arrow-content img{
+    width: 8px;
+    height: 12px;
+    padding: 7px 2px 2px 9px;
+}
+/*-------------image content box style end --------*/
+/*--------- page content Style End ------------*/
+footer{
+    padding-top: 15px;
+    padding-bottom: 68px;
+    background-color: white;
+    text-align: center;
+}
+footer li{
+    display: inline-block;
+}
+footer a{
+    padding-right: 6px;
+    padding-left: 2px;
+    border-right: 1px solid #474b51;
+    color: #474b51;
+    font: 300 14px / 18px GMSans;
+    text-decoration: none;
+    
+}
+footer .last-link a{
+    border-right: none;
+}

@@ -1,0 +1,45 @@
+.banner .wrapper { 
+	width: 80%;
+	margin: 0 auto; 
+	position: relative;
+}
+
+.banner-slider { 
+	width: 50%;
+	padding-bottom: 70px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-image: url("../../assets/images/slide-bg.png");
+
+	.banner-content{
+		width: 75%;
+		float: right;
+	}
+	h2 { 
+		margin-top: 40px;
+		@include font(700, 40px, 'Myriad Pro');
+		color: $font-color;
+	}
+	p{
+		margin-top: 16px;
+		@include font(400, 13px, 'Myriad Pro');
+		color: $content-color;
+	}
+	.btn {
+		display: inline-block;
+		padding: 8px 11px;
+		margin-top: 28px;
+		border-radius: 2px;
+		border: 1px solid #011581;
+		background: linear-gradient(0deg, #011581 0%, #4c5cb3 100%);
+		color: #fff;
+		@include font(700, 24px, 'Myriad Pro');
+		text-decoration: none;
+	}
+	.btn:hover{
+		color: #011581;
+		background: linear-gradient(0deg, #ffffff 0%, rgba(76, 92, 179, 0.26) 100%);
+	}
+}
+

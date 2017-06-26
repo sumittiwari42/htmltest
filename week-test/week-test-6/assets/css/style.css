@@ -1,0 +1,447 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.container{ 
+  max-width: 1700px;
+  margin: 0 auto;
+}
+/*-- header style start here ---*/
+header{
+  width: 100%;
+  border-top: 1px solid #333333;;
+  background-color: #333333;
+}
+.header-wrapper{
+  width: 936px;
+  margin: 61px auto 0px;
+}
+.header-wrapper h1{
+  display: inline-block;
+  margin-bottom: 55px;
+}
+.header-wrapper h1 a{ display: inline-block; }
+.header-wrapper .url-slogan{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: right;
+}
+.header-list-content{ 
+  margin-bottom: 70px;
+  text-align: right;
+   }
+.header-wrapper .url-slogan span,
+.header-wrapper h2{
+  color:  #ffffff;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+.header-wrapper .url-slogan a{
+  color:  #ffffff;
+  text-decoration: none;
+}
+.url-slogan .url{ border-right: none; }
+.url-slogan span{
+  padding: 10px 14px;
+  border-right: 1px solid;
+}
+.header-content{
+  margin-right: 38px;
+  display: inline-block;
+}
+.list-header{
+  width: 180px;
+  padding: 21px 14px;
+  display: inline-block;
+  background: url(../images/list.png);
+  background-size: 100% 100%;
+  box-shadow: 0px 0px 15px 0px rgba(3, 4, 4, 0.25);
+  text-align: left;
+  vertical-align: top;
+}
+.header-content h2,
+.header-content p{ 
+  margin-left: 12px; 
+  text-align: left;
+}
+.header-content h2{
+  margin-bottom: 18px;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 36px;
+}
+.header-content p,
+.smple-nav li a{
+  color:  #ffffff;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 21px;
+  text-decoration: none;
+}
+.smple-nav li{
+  display: inline-block;
+}
+.list-header Span{
+  margin-left: 14px;
+ font-family: Arial;
+ color:  #ffffff;
+ font-size: 14px;
+ font-weight: 700;
+ line-height: 22px;
+ text-align: left;
+ vertical-align: middle;
+}
+.smple-nav{
+  text-align: left;
+}
+.smple-nav li a{
+  padding: 0px 12px;
+  border-right: 1px solid;
+  vertical-align: middle;
+}
+.smple-nav .last a{ border-right: none; }
+.list-header .list-number{ 
+  margin-left: 45px;
+  font-size: 32px;
+   }
+.tab-nav li{
+  display: inline-block;
+}
+.tab-nav .article,
+.preview,
+.report{
+  padding: 12px 116px 12px 27px;
+  background-size: 100% 100%;
+}
+.tab-nav{
+  background: url(../images/tab-nav-bg.png);
+  background-size: 100% 100%;
+}
+.tab-nav img{ width: 24px; }
+.tab-nav .article a,
+.tab-nav .preview a,
+.tab-nav .report a{
+ margin-left: 8px;
+ font-family: Arial;
+ color:  #ffffff;
+ font-size: 21.86px;
+ font-weight: 700;
+ letter-spacing: -0.656px;
+ line-height: 40px;
+ text-align: left;
+ text-decoration: none;
+ vertical-align: middle;
+}
+.report{ margin-left: 6px; }
+/*-- header end --*/
+.url-slogan a:hover,
+.smple-nav a:hover,
+.tab-nav a:hover,
+.footer-logo a:hover,
+.journals a:hover,
+.url-social a:hover{ 
+  color:  #405da6; 
+  -webkit-transition: color 0.6s;
+  transition: color 0.6s;
+ }
+.smple-nav a:hover,
+.footer-logo a:hover{ border-color: #ffffff; }
+/*-- maon styel start --*/
+.main-wrapper{
+  width: 936px;
+  margin: 0 auto 69px;
+  background-color: #efefef;
+}
+.list-one,
+.list-two{
+  width: 280px;
+  display: inline-block;
+  vertical-align: top;
+}
+.list-one{ margin-right: 25px; }
+.list-two{ margin-left: 25px; }
+.page-title { 
+  padding-top: 62px;
+  padding-left: 78px;
+  margin-bottom: 32px; 
+}
+.list h3,
+.list ul{ padding-left: 5px; }
+.page-list{ padding-left: 78px; }
+.page-title h2{
+  margin-bottom: 13px;
+  color:  #333333;
+  font-family: Lato;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.page-title p{
+  font-family: Lato;
+  color:  #666666;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+.list li{
+  list-style: none;
+  font-family: Arial;
+  color:  #333333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+}
+.list h3{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.52);
+  font-family: Arial;
+  color:  #333333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+.list{ margin-bottom: 25px; }
+/*---main style end --*/
+
+/*---footer style start --*/
+footer{
+  width: 100%;
+  background-color: #333333;
+}
+.footer-content{
+  width: 936px;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+.footer-logo{
+  width: 410px;
+  display: inline-block;
+  vertical-align: top;
+}
+.footer-logo h2,
+.footer-logo p{ margin-left: 10px; }
+.journals{
+  width: 195px;
+  display: inline-block;
+  vertical-align: top;
+}
+.journals,
+.url-social{ margin-left: 26px; }
+.url-social{
+  width: 130px;
+  display: inline-block;
+  vertical-align: top;
+}
+.footer-logo p,
+.footer-logo ul li a,
+.journals li a{
+  margin-bottom: 25px;
+  font-family: Arial;
+  color:  #cccccc;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+}
+.footer-logo h2{ margin-bottom: 25px; }
+.footer-logo p span{
+  color: white;
+  font-weight: 600;
+}
+.footer-logo ul li{
+  display: inline-block;
+}
+.footer-logo ul li a{
+  padding: 0px 10px;
+  border-right: 1px solid;
+  text-decoration: none;
+}
+.footer-logo ul .last a{ border-right: none; }
+.journals li{ list-style: none; }
+.journals li a{ 
+  cursor: pointer;
+  text-decoration: none; 
+}
+.url-social li{ list-style: none; }
+.url-social li a,
+.journals h3{
+  font-family: Arial;
+  color:  white;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 25px;
+  text-align: left;
+  text-decoration: none;
+}
+/*---footer style end --*/
+@-moz-document url-prefix() {  
+  .header-content{
+    width: 695px;
+    margin-right: 0px;
+  }
+  .header-content h2{ font-size: 35px; }
+  .header-content p, .smple-nav li a{ font-size: 14px; }
+  .list-header {
+    width: 172px;
+    padding: 19px 12px;
+  }
+}

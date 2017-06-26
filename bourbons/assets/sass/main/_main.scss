@@ -1,0 +1,45 @@
+main {
+	.community-program {
+		@include size(75% null);
+		@include margin(0 auto 50px);
+		@include padding(50px null null null);
+		text-align: center;
+	  h2 {
+       @include margin(null null 25px null);
+        color: $content_color;
+        font-family: ProximaNova;
+        font-size: 48px;
+	    }
+	    p{
+      	color: $content_color;
+        font: 400 18px/32px 'ProximaNova';
+      }  
+	}
+	.program-nav {
+		@include border-width(1px null 1px null);
+		@include border-style(solid);
+		@include border-color(#a8ad00);
+		ul {
+      text-align: center;
+		}
+		li {
+			@include margin(40px 13px 43px);
+  		@include inline-block;
+  		a{
+  			@include inline-block;
+    	  color: $content_color;
+        font-size: em($nove-font);
+        text-decoration: none;
+  		}
+		}
+	}
+	.objectives {
+		h2 {
+			@include margin(null null 10px null);
+		  color: #a8ad00; 
+      font: 700 38px ProximaNova;
+      text-align: center;
+      text-transform: uppercase;
+    }
+	}
+} 

@@ -1,0 +1,403 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*-- header style start here ----*/
+
+h1{
+    margin: 41px 0px 43px 50px;
+    display: inline-block;
+}
+header{ 
+  width: 90%; 
+  margin: 0 auto;
+}
+header .nav{
+    margin-top: 28px;
+    margin-right: 50px;
+    display: inline-block;
+    float: right;
+}
+.nav li{
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 105px;
+}
+.nav a{
+    color: #a7a7a7;
+    font: 700 13px / 50px PTSans;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/*-- header style end here ----*/
+/* ---------banner part style start ---*/
+.banner{
+    background: url(../images/banner.png);
+    background-size: 100% 100%;
+    text-align: center;
+}
+.banner h2{
+    width: 404px;
+    padding-top: 173px;
+    display: inline-block;
+}
+.banner h2 a{
+    color: #303030;
+    font: 700 40px / 50px PTSans;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.banner p{
+    margin-top: 33px;
+    margin-bottom: 67px;
+    color: #5a5a5a;
+    font: italic 16px / 30px Georgia;
+    font-style: italic;
+}
+.arrow-wrapper{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 53px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.arrow-wrapper a img{
+    width: 16px;
+    height: 11px;
+    position: absolute;
+    top: 21px;
+    left: 17px;
+}
+.arrow-wrapper img{
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+}
+/* ---------banner part style end ---*/
+.heading{
+    display: inline-block;
+}
+.heading:after{
+    content: '';
+    width: 240px;
+    height: 3px;
+    position: absolute;
+    top: 90px;
+    left: 480px;
+    background: url(../images/hedaing-line.png);
+}
+.heading a{
+    color: #303030;
+    font: 700 30px / 25px PTSans;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.para{
+    width: 532px;
+    margin: 53px auto 0px;
+    color: #5a5a5a;
+    font: 400 15px / 25px OpenSans;
+}
+.feature{
+    padding-top: 50px;
+    position: relative;
+    text-align: center;    
+}
+/*----- work style start here -----*/
+.works li{
+    width: 260px;
+    height: 170px;
+    margin: 60px 30px 0px;
+    display: inline-block;
+    
+}
+.works li img{
+    width: 260px;
+    height: 170px;
+}
+/*----- work style end here -----*/
+/*----- team style start here -----*/
+.team{
+    padding-bottom: 80px;
+    margin-top: 70px;
+    position: relative;
+    background: url(../images/Team-BG.png);
+    background-size: 100% 100%;
+    text-align: center;
+}
+.team h2{ margin-top: 49px; }
+.team-member{ margin-top: 58px; }
+.team-member li{
+    width: 210px;
+    height: 210px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    background: url(../images/team-member-bg.png);
+}
+.team-member li img{
+    margin-top: 19px;
+}
+.team-member a{
+    color: #303030;
+    font: 700 18px / 50px PTSans;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.team-member p{
+    color: #303030;
+    font: italic 12px Georgia;
+}
+.team-member a img{
+    width: 17px;
+    height: 12px;
+    margin: 0px 10px 17px 10px;
+}
+/*----- team style end here -----*/
+/*----- contact style start here -----*/
+.contact{
+    position: relative;
+    text-align: center;
+}
+.contact ul{ margin-top: 64px; }
+.contact li{
+    margin-right: 20px;
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+.contact h2{ margin-top: 49px; }
+.contact p{
+    margin-bottom: 24px;
+    color: #5a5a5a;
+    font: 400 16px / 20px PTSans;
+    text-align: left;
+}
+.contact img{
+    width: 320px;
+    height: 320px;
+}
+.contact textarea{
+    width: 507px;
+    height: 206px;
+    border: #f3f3f3;
+    margin-bottom: 25px;
+}
+.contact .map{ width: 320px; }
+.contact .drop-message{ width: 540px; }
+.contact button img{
+    width: 16px;
+    height: 14px;
+}
+.input-box{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 29px;
+    background-color: #f2f2f2;
+    color: #5f5f5f;
+    font: italic 16px / 20.833px Georgia;
+}
+.contact .input-box-style{
+    width: 283px;
+    height: 32px;
+    border: #f3f3f3;
+    margin-right: 19px;
+}
+.contact .btn{
+    width: 205px;
+    height: 60px;
+    border: none;
+    color: #ffffff;
+    background-color: #6995a9;
+    font: 700 16px / 20px PTSans;
+}
+.contact .btn img{
+    margin-right: 15px;
+    margin-bottom: 3px;
+}
+/*----- contact style end here -----*/
+/*-------footer style start ---*/
+footer{
+    width: 1200px;
+    height: 80px;
+    margin-top: 73px;
+    background: url(../images/footer.png);
+    text-align: center;
+}
+footer p{
+    margin-top: 36px;
+    color: #6e6d6d;
+    font: 400 16px / 25px PTSans;
+    display: inline-block;
+}
+footer .adress{
+    margin-right: 155px;    
+}
+footer .copyright{
+    margin-left: 155px;
+}
+footer span{
+    color: #949494;
+    font: 400 16px / 25px PTSans;
+}
+/*--------- footer style end ----*/
+.nav span img{ display: none; }

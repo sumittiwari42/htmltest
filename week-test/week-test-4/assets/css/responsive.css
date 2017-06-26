@@ -1,0 +1,130 @@
+@media screen and (max-width: 800px){
+	
+	header h1 {
+       margin-top: 30px;
+       margin-bottom: 30px;
+    }
+    .slider {
+      width: 100%;
+    }
+    .slider-img,
+    .slider-content {
+      width: 90%;
+      margin: 0 auto 40px;
+      display: block;
+   }
+   .divice-feature{ width: 100%; }
+   .divice-feature img{ width: 100%; }
+   .about-accesseries {
+    width: 55%;
+    position: relative;
+    display: block;
+  }
+  .accesseries {
+    width: 90%;
+  }
+  .nav span{ display: block; }
+  .about-accesseries p{ width: 95%; }
+  .how-to-work {
+    width: 90%;
+  }
+  .how-to-work .para{ margin-left: 0px; }
+  .how-to-main-img img{ width: 80%; }
+  .what-is-new {
+    width: 90%;
+ }
+  .mobile-slide li:nth-child(3){ display: none; }
+  .get-it { width: 100%; }
+  .download { 
+  	width: 90%;
+  	height: auto;
+  	background-size: 100% 100%; 
+  }
+  .download li{ 
+  	width: 100%;
+  	margin: 12px 0px;
+  	display: block;
+  }
+  .download ul{ padding: 12px 0px; }
+  .download-text{ 
+    margin-bottom: 12px;
+    margin-left: 12px;
+    vertical-align: bottom;
+  	text-align: left; 
+  }
+  .download-text h3,
+  .download-text p{ display: inline-block; }
+  .get-it h2::after,
+  .get-it h2::before{ display: none; }
+  .about-accesseries h2{ font: 400 36px / 55px TenorSans; }
+  .about-accesseries h2 span { font: 400 50px / 18px TenorSans; }
+  footer{ 
+  	height: 100%;
+  	padding: 20px 0px;
+  	text-align: center;
+  }
+  .follow{
+  	 margin: 0px;
+  	float: none;
+  }
+  .copyright{ margin: 0px 6px 18px; }
+}
+@media screen and (max-width: 450px){
+  .how-to-work h2{ font: 400 13vw / 16vw TenorSans; }
+  .contact-detaile{ display: block; }
+  .map{ margin-bottom: 20px; }
+  .about-accesseries {
+    width: 90%;
+    margin-top: 400px;
+    position: relative;
+    display: block;
+  }
+}
+@media screen and (max-width: 630px){
+  .mobile-slide li:nth-child(2){ display: none; }
+  .what-is-new h2{ font: 400 12vw / 80px TenorSans; }
+  .pre { left: -4px; }
+}
+@media screen and (max-width: 1080px){
+  .contact-link li{ display: block; }
+  .contact-link{ background-size: 100% 100%; }
+  .footer-top li{ margin-left: 5%; }
+  .contact-link .quick-link{ margin-left: 5%; }
+  .footer-top{
+  	width: 100%;
+  	padding: 12px 0px;
+  }
+  .accesseries{ width: 100%; }
+  .how-to-work,
+  .what-is-new,
+  .get-it{ width: 95%; }
+}
+@media screen and (max-width: 980px){
+  .nav nav{
+		display: none;
+		background: none;
+	}
+	.nav{
+	    height: auto; 
+		background-color: black;
+		text-align: center;
+		 }
+	.nav:hover nav{
+		width: 100%;
+		display: block;
+	}
+	.nav span{
+		color: white;
+        font-size: 50px;
+	}
+	nav li {
+		display: block;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+	}
+	nav li a{
+		font: 400 35px / 27.505px TenorSans;
+	}
+}
+@media screen and (min-width: 1081px){
+   .nav span{ display: none; }
+}

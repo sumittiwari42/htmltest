@@ -1,0 +1,482 @@
+@charset "utf-8";
+@import 'https://fonts.googleapis.com/css?family=Indie+Flower';
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {font-family: "ProximaNovaExtra";
+    src: url("//db.onlinewebfonts.com/t/e40c30374a5af220462ad9dcd225aeb4.eot");
+    src: url("//db.onlinewebfonts.com/t/e40c30374a5af220462ad9dcd225aeb4.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/e40c30374a5af220462ad9dcd225aeb4.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/e40c30374a5af220462ad9dcd225aeb4.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/e40c30374a5af220462ad9dcd225aeb4.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/e40c30374a5af220462ad9dcd225aeb4.svg#ProximaNovaExtraCondensedW07-Md") format("svg");
+}
+/*-- header style start here --*/
+a { display: inline-block; }
+
+header {
+  border: 1px solid #cfcfcf;
+  background-color:  #a8ad00;
+}
+header .nav { margin-top: 50px; }
+header .nav li{
+  margin: 0px 16px;
+  display: inline-block;
+}
+
+.nav li a{
+  color:  #ffffff;
+  font: 18px 'ProximaNova';
+  text-decoration: none;
+}
+
+.nav li:hover a,
+.objective-list li a:hover { 
+  text-shadow: 1px 0px 3px #fff;
+  -webkit-transition: text-shadow 0.7s;
+  transition: text-shadow 0.7s;
+}
+
+header h1,
+header .nav { float: left; }
+
+.donate { 
+  padding: 11px 9px 7px 7px;
+  border-radius: 15px;
+  margin: 35px 34px 0px 0px;
+  float: right; 
+  background-color: #fff;
+}
+
+.donate .btn {
+  border: 0px;
+  vertical-align: middle;
+  background-color: #fff;
+  color: #750e2b;
+  font: 700 18px 'ProximaNova';
+  outline: none;
+}
+
+.donate .btn:hover { 
+  text-shadow: 1px 0px 2px #750e2b;
+  -webkit-transition: text-shadow 0.7s;
+  transition: text-shadow 0.7s; 
+}
+/*-- header style end here --*/
+
+/*-- main styel start here --*/
+.program-nav li .apply-btn:hover,
+.apply-btn:hover {    
+  background-color: #e5e5df;
+  color: #f39c12;
+  -webkit-transition: background-color 0.7s;
+  transition: background-color 0.7s; 
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s; 
+}
+
+.program-nav li a:hover {
+  color: #f39c12; 
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.banner img { width: 100%; }
+
+.banner { 
+  margin-bottom: 40px;
+  position: relative; 
+}
+
+.banner h2 {
+  color: #fff;
+  font: 700 48px 'Indie Flower', cursive;
+  text-shadow: 0px 1px 0.99px rgba(0, 0, 0, 0.75);
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 65px;
+  left: 35px;
+}
+
+.community-program { 
+  width: 75%;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.community-program h2 {
+  margin-bottom: 25px;
+  color:  #000000;
+  font-family: ProximaNova;
+  font-size: 48px;
+}
+
+.community-program p {
+  color: #010000;
+  font: 400 18px/32px 'ProximaNova';
+}
+
+.program-nav {
+  margin-bottom: 40px;
+  border-top: 1px solid #a8ad00;
+  border-bottom: 1px solid #a8ad00;
+  text-align: center;
+}
+
+.program-nav li {
+  margin: 20px 17px;
+  display: inline-block;
+}
+
+.program-nav li a {
+  color:  #000;
+  font: 400 18px 'ProximaNova';
+  text-decoration: none;
+}
+
+.program-nav li .apply-btn {
+  padding: 11px 10px 10px 10px;
+  border-radius: 15px;
+  background-color: #f39c12;
+  color:  #fff;
+  font: 700 20px 'ProximaNova'; 
+}
+
+.box h2{
+  margin-bottom: 10px;
+  color:  #a8ad00;
+  font: 700 38px ProximaNova;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.box { 
+  margin-bottom: 30px;
+  border-bottom: 1px solid #a8ad00; 
+  text-align: center;
+}
+
+.box p{
+  margin-bottom: 25px;
+  color: #010000;
+  font: 400 17px/30px 'ProximaNova';
+}
+
+.objectives { text-align: center; }
+
+.objective-list li {
+  width: 20%;
+  min-height: 450px;
+  margin: 0px 45px 60px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #a8ad00;
+}
+
+.objective-list li img { margin: 15px 0px; }
+
+.objective-list li a{ 
+  color:  #fff;
+  text-decoration: none; 
+}
+
+.objective-list li h3 {
+  color:  #fff;
+  font: 700 24px/39px 'ProximaNova';
+}
+
+.objective-list li .objective-content{
+  padding: 6px 18px;
+  color:  #fff;
+  font: 500 18px/26px 'ProximaNova';
+}
+
+.grant {
+  width: 23%;
+  margin: 0px 30px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.grant .heading {
+  margin-bottom: 7px;
+  background-color: rgba(196, 223, 155, 0.4);
+} 
+
+.grant .heading h3 { 
+  color:  #000;
+  font: 700 17px/39px 'ProximaNova';
+  text-transform: uppercase;
+}
+
+.grant-box {
+  min-height: 78px;
+  padding-top: 10px;
+  border-bottom: 1px solid #a8ad00;
+  color:  #010000;
+  font: 400 18px/30px 'ProximaNova';
+}
+
+.apply {
+  position: absolute;
+  bottom: -18px;
+  left: calc(25%);
+}
+
+.box .grant-box p { margin-bottom: 0px; }
+
+.box-child {
+  padding: 10px 20px;
+  min-height: 130px;
+}
+
+.grant-content {
+  padding-bottom: 35px;
+  background-color: rgba(196, 223, 155, 0.1);
+}
+
+.box-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.box-wrapper li {
+  margin-left: 75px;
+  color:  #010000;
+  font: 400 18px/39px 'ProximaNova';
+  text-align: left;
+  list-style-image: url(../images/arrow.png);
+  list-style-position: inside;
+}
+
+.box-wrapper ul { margin-bottom: 25px; }
+.box-wrapper li span { font-weight: 700; }
+
+.apply-btn {
+  padding: 7px 14px 4px 16px;
+  border: 0px;
+  border-radius: 15px;
+  color:  #fff;
+  background-color: #f39c12;
+  font: 700 20px/30px 'ProximaNova';
+  outline: none;
+}
+
+.forms {
+  width: 447px;
+  border: 4px dashed #a8ad00;
+  position: relative;
+  bottom: 175px;
+  left: 33%;
+  background-color: #ffffff;
+}
+
+.forms li a:hover,
+.footer-nav li a:hover {  
+  color: #750e2b;
+  -webkit-transition: color 0.6s;
+  transition: color 0.6s;
+}
+
+.footer-nav li a:hover { border-right: 1px solid #000; }
+
+.forms h3 {
+  padding: 20px 7px 10px 43px;
+  color: #000;
+  font: 700 30px 'ProximaNova';
+}
+
+.forms li a{
+  padding: 20px 7px 10px 43px;
+  color: #000;
+  font: 700 24px 'ProximaNova';
+  text-decoration: none;
+}
+
+.forms li a img { margin-right: 15px; }
+.available-grant { padding-bottom: 80px; }
+.img-box img { width: 100%; }
+.egibility p { padding: 0px 70px; }
+.egibility { position: relative; }
+.forms li { list-style-type: none; }
+
+.footer-nav li {
+  display: inline-block;
+}
+
+footer h2 { display: inline-block; }
+
+.footer-nav { 
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: 35px; 
+}
+
+footer .footer-nav li:last-child a { border-right: none; }
+.footer-nav li a {
+  padding-right: 18px;
+  border-right: 1px solid;
+  color:  #000;
+  font: 400 18px/26px 'ProximaNova';
+  text-decoration: none;
+}
+
+footer .footer-nav .last-child a { border-right: 0px; }
+/*-- main styel end here --*/

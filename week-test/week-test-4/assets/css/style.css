@@ -1,0 +1,574 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.wrapper{
+    background-color: aliceblue;
+}
+header{
+    margin-bottom: 81px;
+    padding-top: 1px;
+}
+header h1{
+    margin-top: 42px;
+    margin-bottom: 39px;
+    color: #2498f8;
+    font: 400 37px / 10.505px ArialRoundedMTBold;
+    text-transform: uppercase;
+    text-align: center;
+}
+nav{
+    width: 940px;
+    margin: 0 auto;
+    background: url(../images/nav-bg.png);
+}
+.nav{
+    height: 68px;
+    background: url(../images/nav-shadow.png);
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: 52% 89%;
+}
+nav li{
+    padding: 18px 26px 15px;
+    display: inline-block;
+}
+nav li a{
+    color: #444444;
+    font: 400 13px / 10.505px TenorSans;
+    text-transform: uppercase;
+    text-decoration: none;    
+}
+.active{
+    background-color: #979799;
+    color: #ffffff;
+}
+.active a,
+nav li a:hover{
+    color: #ffffff;
+}
+nav li:hover{
+    background-color: #979799;
+    
+}
+.slider{
+    width: 940px;
+    margin: 0px auto 35px;
+    position: relative;
+}
+.slider-img{
+    width: 462px;
+    display: inline-block;
+    vertical-align: top;
+}
+.slider-img img{
+    width: 100%;
+}
+.slider-content .para-head{
+    color: #888888;
+    font: 400 26px / 18px TenorSans;
+}
+.slider-content{
+    width: 462px;
+    margin-bottom: 120px;
+    margin-left: 8px;
+    display: inline-block;
+}
+.slider-content h2 span{
+    margin-bottom: 31px;
+    color: #1977bd;
+    font: 400 80px / 58px TenorSans;
+}
+.slider-content h2{
+    margin-bottom: 31px;
+    color: #a7a7a7;
+    font: 400 55px / 58px TenorSans;
+}
+.slider-content .para-head{
+  color: #a7a7a7;
+  font: 400 20px / 20px TenorSans;
+}
+.slider-content .para{
+  margin-bottom: 68px;
+  color: #a7a7a7;
+  font: 400 20px / 25px TenorSans;  
+}
+.slide-button{
+    text-align: center;
+}
+.slide-button li{
+    display: inline-block;
+}
+.slide-button:before{
+    content: '';
+    width: 76%;
+    height: 3px;
+    position: absolute;
+    left: 129px;
+    bottom: 36px;
+    background-image: url(../images/how_to_border.png);
+
+}
+
+.accesseries{
+    width: 940px;
+    margin: 0 auto 78px;
+    padding: 1px;
+    position: relative;
+    background: url(../images/whats-in_bg.png);
+}
+.about-accesseries h2 span{
+    color: #1977bd;
+    font: 400 80px / 18px TenorSans;
+}
+.about-accesseries h2{
+    margin-top: 44px;
+    margin-left: 29px;
+    color: #444444;
+    font: 400 55px / 90px TenorSans;
+}
+.about-accesseries p{
+    width: 491px;
+    margin-bottom: 18px;
+    margin-left: 29px;
+    color: #444444;
+    font: 400 15px / 20px Buenard;
+}
+.about-accesseries button{
+    margin-bottom: 26px;
+    margin-left: 33px;
+}
+.about-accesseries{
+    width: 755px;
+    display: inline-block;
+}
+.img-accesseries{
+    position: absolute;
+    top: 24px;
+    right: 10px;
+}
+.how-to-work{
+    width: 940px;
+    margin: 0 auto 68px;
+}
+.how-to-work h2{
+    margin-bottom: 19px;
+    margin-left: 10px;
+    display: inline-block;
+    color: #1977bd;
+    font: 400 80px / 68px TenorSans;
+}
+.how-to-work h2 span{ color: #444444; }
+.how-to-work img{
+    vertical-align: top;
+}
+.how-to-work .para{
+    margin-bottom: 65px;
+    margin-left: 83px;
+    color: #444444;
+    font: 400 15px / 20px Buenard;
+}
+.how-to-main-img{
+    margin-bottom: 50px;
+    text-align: center;
+}
+.center-para{
+    text-align: center;
+}
+.center-para p{
+    color: #444444;
+    font: 400 15px / 20px Buenard;
+}
+.bottom-space{
+    margin-bottom: 20px;;
+}
+.center-para p span{ font-weight: 700; }
+
+.what-is-new{
+    width: 940px;
+    margin: 0 auto 57px;;
+    position: relative;
+    text-align: center;
+}
+.what-is-new h2{
+    margin-bottom: 40px;
+    color: #888888;
+    font: 400 80px / 80px TenorSans;
+}
+.what-is-new h2 span{ color: #1977bd; }
+.mobile-slide li{
+    width: 200px;
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.mobile-slide li img{
+    margin-bottom: 38px;
+}
+.mobile-slide li h3{ 
+    margin-bottom: 19px;
+    color: #1977bd;
+    font: 400 20px / 18px TenorSans;
+    text-align: left;
+}
+.mobile-slide li p{
+    color: #444444;
+    font: 400 15px / 20px Buenard;
+    text-align: left;
+    margin-bottom: 18px;
+}
+.mobile-slide li{ text-align: left; }
+.mobile-slide li button img{ margin-bottom: 0px; }
+.next{
+    position: absolute;
+    right: 12px;
+    top: 250px;
+}
+.pre{
+    position: absolute;
+    left: 12px;
+    top: 250px; 
+}
+.get-it{
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+.get-it h2{
+    margin-bottom: 35px;
+    color: #5b5b5b;
+    font: 400 26px / 18px TenorSans;
+}
+.get-it h2:before{
+    content: '';
+    width: 363px;
+    height: 5px;
+    position: absolute;
+    left: -4px;
+    top: 8px;
+    background: url(../images/get_left.png);
+}
+.get-it h2:after{
+    content: '';
+    width: 363px;
+    height: 5px;
+    position: absolute;
+    right: -4px;
+    top: 8px;
+    background: url(../images/get_right.png);
+}
+.download{
+    width: 809px;
+    height: 76px;
+    margin: 0 auto 37px;
+    background: url(../images/get_it_list_bg.png);
+}
+.download li{
+    width: 150px;
+    margin: 0 23px;
+    display: inline-block;
+}
+.download li img{
+    width: 35px;
+    height: 46px;
+    margin-top: 12px;
+    vertical-align: top;
+}
+.download-text h3{
+    color: #ffffff;
+    font: 400 22px / 18px 'Myriad Pro';
+}
+.download-text p a{
+    color: #dcdcdc;
+    font: 400 14px / 18px 'Myriad Pro';
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.download-text{
+    width: 70%;
+    margin-top: 12px;
+    display: inline-block;
+}
+.contact-link{
+    width:100%;
+    margin: 0 auto;
+    background: url(../images/top_footer_bg.png);
+}
+.contact-link h3{
+    margin-bottom: 35px;
+    color: #ffffff;
+    font: 400 26px / 18px TenorSans;
+}
+.contact-link li{
+    margin-top: 26px;
+    display: inline-block;
+    vertical-align: top;
+}
+.contact-link .quick-link{
+   width: 200px;;
+}
+.contact-link .quick-link li{
+    display: block;
+    margin-top: 0px;
+}
+.contact-link .quick-link{ margin-left: 70px; }
+.contact-link .quick-link li a{
+    margin-left: 6px;
+    color: #ffffff;
+    font: 400 11px / 26px Arial;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.contact-link .contact-us{
+    width: 498px;
+}
+.contact-link .get-in-touch{
+    width: 240px;
+}
+label{
+    vertical-align: top;
+}
+.contact-detaile{
+    width:155px;
+    display: inline-block;
+}
+.contact-detaile p{
+    color: #ffffff;
+    font: 400 11px / 15px Arial;
+}
+.map{
+    width: 207px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+.input-box{
+    width: 220px;
+    height: 31px;
+    margin-bottom: 12px;
+    border: 2px solid rgba(167, 167, 167, 0.36);
+    border-radius: 4px;
+}
+.get-in-touch textarea{
+    width: 218px;
+    height: 121px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+.get-in-touch button{
+    width: 78px;
+    height: 31px;
+    margin-bottom: 30px;
+    border: 2px solid rgba(167, 167, 167, 0.36);
+    border-radius: 4px;
+    color: #0784b6;
+    font: 400 14px / 18px 'Myriad Pro';
+}
+.bottom-space{
+    margin-bottom: 12px;
+}
+label{
+    margin-right: 20px;
+    color: #ffffff;
+    font: 400 14px / 18px Arial;
+}
+.footer-top{
+    width: 1100px;
+    margin: 0 auto;
+}
+footer{
+    width: 100%;
+    height: 155px;
+    border-top: 1px solid;
+    background-color: black;
+}
+footer .website{
+    margin-right: 25px;
+    display: inline-block;
+    color: #ffffff;
+    font: 400 19px / 10.505px ArialRoundedMTBold;
+}
+footer p{
+    display: inline-block;
+    color: white;
+    font: 400 13px / 22px Arial;
+}
+footer p span{ color: #64c3ed; }
+.follow{
+    margin-top: 40px;
+    margin-right: 44px;
+    float: right;
+}
+footer .follow-link{
+    display: block;
+}
+.copyright{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 44px;
+}
+.contact-link .quick-link li a:hover{
+    color: #e5e2df;
+}
+.mobile-slide button:hover,
+.about-accesseries button:hover{
+    background-color: rgba(128, 128, 128, 0);
+}
+.get-in-touch button:hover{ color: #888888; }
+.download-text p a:hover{
+    color: white;
+}

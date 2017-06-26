@@ -1,0 +1,103 @@
+@media screen and (max-width: 768px){
+	.nav .navigation{
+		display: none;
+		background-color: #4d728c;
+	}
+	header h1 {
+       margin: 28px 0px 28px 50px;
+    }
+	.nav:hover .navigation{
+		width: 100%;
+		display: block;
+		position: absolute;
+		top: 61px;
+        left: 0px;
+        text-align: center;
+	}
+	.navigation li{
+		margin-left: 0px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.52);
+		display: block;
+
+	}
+	.nav span img{
+	   display: block;
+	   width: 50px;
+       height: 45px;
+   }
+   .nav a {
+   	  font: 700 25px / 50px PTSans;
+   }
+   .nav a:hover{ color: white; }
+   header .nav {
+    margin-top: 15px;
+   }
+    .feature{ width: 100%; }
+   .para{ width: 90%; }
+   .heading:after{ display: none; }
+   .contact .drop-message {
+    width: 90%;
+}
+.contact textarea{ width: 90%; }
+.contact .input-box-style{ 
+	width: 90%; 
+	margin-right: 0px;
+	margin-bottom: 20px;
+}
+.contact .btn {
+    width: 50%;
+    float: left;
+}
+footer{ 
+	width: 100%;
+	height: auto; 
+	padding: 15px 0px;
+}
+footer .adress{ margin-right: 0px;}
+footer .copyright{ margin-left: 0px; }
+footer p{ margin-top: 0px; }
+.contact .map {
+    width: 90%;
+    margin-bottom: 20px;
+}
+}
+@media screen and (max-width: 450px)
+{
+	.banner{ width: 100%; }
+	.banner h2{
+		width: 90%;
+		margin: 0 auto;
+	}
+   .banner h2 a{ font: 700 9vw / 10vw PTSans; }
+   .contact img {
+    width: 100%;
+    height: auto;
+}
+header h1{ margin-left: 20px; }
+header .nav { margin-right: 20px; }
+}
+@media screen and (max-width: 1080px){
+	footer{
+		width: 100%;
+		height: auto;
+		padding: 15px 0px;
+	}
+	/*.contact .input-box-style {
+        width: 280px;*/
+    }
+    footer .adress{ 
+    	margin-right: 0px;
+        display: block;
+    }
+    footer .copyright{ margin-left: 0px; }
+    footer p{ margin-top: 0px; }
+    .team-member li{ margin-bottom: 20px; }
+    .heading::after {
+    	content: '';
+    	width: 30%;
+    	height: 3px;
+    	position: absolute;
+    	top: 90px;
+    	left: 35%;
+    	background: url(../images/hedaing-line.png);}
+}

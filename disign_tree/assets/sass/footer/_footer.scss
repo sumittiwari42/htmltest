@@ -1,0 +1,134 @@
+footer {
+	padding-top: 50px;
+	background: #0d1a61;
+	.wrapper {
+		width: 80%;
+		margin: 0 auto;
+	}
+	h4{
+		@include font(700, 30px, 'Myriad Pro');
+		color:  #fff;
+		letter-spacing: -0.75px;
+		text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+	}
+
+	p{
+		margin-top: 14px;
+		@include font(400, 13px, 'Myriad Pro');
+		color:  #fff;
+	}
+
+	.text-widget {
+		width: 30%;
+		display: inline-block;
+		vertical-align: top;
+
+		.read-more{
+			margin-top: 40px;
+			text-align: right;
+		}
+
+		.more-btn {
+			display: inline-block;
+			padding: 6px 10px 5px;
+			border-radius: 2px;
+			border: 1px solid #060c2e;
+			@include font(700, 14px, 'Myriad Pro');
+			background: linear-gradient(0deg, #e8e5d0 0%, #ffffff 100%);
+			color: $font-color;
+			text-transform: uppercase;
+		}
+	}
+
+	.get-in-touch {
+		width: 20%;
+		display: inline-block;	
+		margin: 0px 15px 0px 35px;
+		vertical-align: top;
+
+		li{
+			margin-top: 8px;
+			list-style: none;
+
+			.social-text{
+				margin-left: 6px;
+				display: inline-block;
+				@include font(400, 14px, 'Myriad Pro');
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.form{
+		margin-top: 12px;
+		position: relative;
+	}
+
+	.contact {
+		width: 40%;
+		display: inline-block;
+		vertical-align: top;
+
+		.input-box{
+			width: 40%;
+			display: block;
+			padding: 7px;
+			margin-top: 8px;
+			border-radius: 4px;
+			outline: none;
+			border: none;
+		}
+
+		.text-area {
+			width: 50%;
+			display: block;
+			padding: 6px;
+			border-radius: 4px;
+			outline: none;
+			border: none;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 6px 25px 5px;
+			margin-top: 10px;
+			border-radius: 2px;
+			border: 1px solid #060c2e; 
+			@include font(700, 14px, 'Myriad Pro');
+			background: linear-gradient(0deg, #e8e5d0 0%, #ffffff 100%);
+			color: $font-color;
+			text-transform: uppercase;
+		}
+	}
+
+	.footer-bottom{
+		padding: 16px 0px;
+		margin-top: 16px;
+		background: url("../../assets/images/footer-bg.png");
+		.footer-text{
+			display: inline-block;
+		}
+
+		.footer-nav{
+			float: right;
+			margin-right: 40px;
+			li{
+				display: inline-block;
+				margin: 0px 30px;
+
+				a{
+					display: inline-block;
+					@include font(400, 12px, 'Myriad Pro');
+					color:  #fff;
+					text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.19);
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

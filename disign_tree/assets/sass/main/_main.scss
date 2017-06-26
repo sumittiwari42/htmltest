@@ -1,0 +1,192 @@
+main { 
+	background: rgb(244, 241, 224); 
+	.wrapper { 
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+
+.blog-section {
+	width: 35%;
+	padding-bottom: 15px;
+	position: absolute;
+	background: #fff;
+	box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.3);
+
+	.blog-heading{
+		width: 90%;
+		margin: -24px auto 0;
+		position: relative;
+		background: url("../../assets/images/fold-bg.png");
+		box-shadow: gray 3px 5px 16px;
+
+		.blog-btn {
+			position: absolute;
+			right: 19px;
+			top: 9px;
+		}
+
+		h3{
+			padding: 10px 18px;
+			@include font(700, 20px, 'Myriad Pro');
+			color: $font-color;
+			text-transform: uppercase;
+		}
+	}
+
+	.blog-img{
+		width: 45%;
+		display: inline-block;
+		text-align: center;
+		vertical-align: top;
+	}
+	.blog-content{
+		width: 45%;
+		display: inline-block;
+		h4{
+			@include font(700, 18px, 'Myriad Pro');
+			color: $font-color;
+		}
+		.post-info{
+			@include font(400, 10px, 'Myriad Pro');
+			color: #c0bb9a;;
+		}
+	}
+	.blog-box{
+		padding-bottom: 25px;
+		margin-top: 25px;
+	}
+
+	.first {
+		margin-top: 42px;
+	}
+
+	.post-detail{
+		margin-top: 5px;
+		@include font(400, 13px, 'Myriad Pro');
+		color: #777;
+	}
+
+	.read-more {
+		text-align: right;
+
+		.read-btn {
+			padding: 3px 6px;
+			border-radius: 2px;
+			border: 1px solid #091c86;
+			background: linear-gradient(0deg, #0e218a 0%, #4758b0 100%);
+			color: #fff;
+		}
+		.read-btn:hover {
+			color: #011581;
+			background: linear-gradient(0deg, #ffffff 0%, rgba(76, 92, 179, 0.26) 100%);
+		}
+	}
+}
+
+.side-content-section {
+	width: 50%;
+	float: right;
+	position: relative;
+
+	h4{
+		margin-top: 36px;
+		@include font(700, 24px, 'Myriad Pro');
+		color: $font-color;
+	}
+	.content-box{
+		width: 45%;
+		margin: 21px 10px 4px 10px;
+		display: inline-block;
+
+		.content{
+			margin-top: 10px;
+			@include font(400, 13px, 'Myriad Pro');
+			color: #777;
+		}
+	}
+
+	.head-img {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	h5{
+		width: 45%;
+		display: inline-block;
+		color: #a19c80;
+		@include font(700, 14px, 'Myriad Pro');
+	}
+
+	.read-more{
+		text-align: right;
+	}
+	
+	.more-btn {
+		display: inline-block;
+		padding: 3px 8px;
+		border-radius: 2px;
+		border: 1px solid  #b7b49f;
+		background: linear-gradient(0deg, #e9e7d8 0%, #f9f8f2 100%);
+		box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.21);
+	}
+	.more-btn:hover {
+		color: #011581;
+		background: linear-gradient(0deg, #ffffff 0%, rgba(76, 92, 179, 0.26) 100%);
+	}
+}
+
+.tweet-box {
+	margin-top: 20px;
+	padding-bottom: 18px;
+}
+
+.tweet-head {
+	.tweet-img {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	h5{
+		display: inline-block;
+		@include font(700, 20px, 'Myriad Pro');
+		color:  #539fc7;
+
+		span{
+			display: block;
+		}
+	} 
+}
+
+.tweets {
+	li{
+		margin-top: 10px;
+		list-style: none;
+	}
+	p{
+		@include font(400, 13px, 'Myriad Pro');
+		color: #777;
+
+		a{
+			color: $font-color;
+			text-decoration: none;	
+		}
+	}
+	span{
+		@include font(400, 13px, 'Myriad Pro');
+		color: #777;
+	}
+}
+
+.slide-btn{
+	position: absolute;
+	top: -27px;
+	left: calc(70%);
+	background: url("../../assets/images/arrow-bg.png");
+
+	a{
+		display: inline-block;
+		padding: 6px 17px;
+	}
+}

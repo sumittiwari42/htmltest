@@ -1,0 +1,5 @@
+@mixin font($font-weight, $font-size, $font-family) {
+	-webkit-font: $font-weight $font-size $font-family ;
+	-moz-font: $font-weight $font-size $font-family ;
+	font: $font-weight $font-size $font-family ;
+}

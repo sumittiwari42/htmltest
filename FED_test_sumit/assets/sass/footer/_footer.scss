@@ -1,0 +1,40 @@
+footer {
+	background-color:  #f7f7f7;
+	padding: 50px 0px;
+
+	.box-3 {
+		@include calc(width, "#{$width} - 66.67%");
+		float: left;
+		text-align: center;
+		@include filter(grayscale(50%));
+
+		li{
+			list-style: none;
+			display: inline-block;
+		}
+
+		li:hover { opacity: 0.6; }
+	}
+
+	.first-content { text-align: left; }
+
+	.developed {
+		p {
+			display: inline-block;
+		}
+
+		h2 {
+			display: inline-block;
+		}
+	}
+
+	.address {
+		padding-left: 75px;
+		@include font(300, 15px, 'Lato');
+		color:  $content-color;
+
+		h4 {
+			@include font(700, 15px, 'Lato');
+		}
+	}
+}

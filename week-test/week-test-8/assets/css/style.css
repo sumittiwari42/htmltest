@@ -1,0 +1,389 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+/*--- header start here --*/
+a{ display: inline-block; }
+header{
+  margin-bottom: 15px;
+  background-color: #0f69d6;
+}
+.header-wrapper{
+  width: 75%;
+  margin: 0 auto;
+}
+.logo{
+  width: 20%;
+  margin-top: 8px;
+  display: inline-block;
+  vertical-align: top;
+}
+.header-center{
+  width: 50%;
+  margin-top: 22px;
+  display: inline-block;
+  vertical-align: top;
+}
+.nav{
+  width: 28%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.nav span{
+  display: inline-block;
+  float: right;
+
+}
+.nav span{
+  display: inline-block;
+  cursor: pointer;
+}
+.nav ul{
+  display: none;
+}
+.nav:hover ul{
+  display: block;
+}
+.nav ul{
+  width: 75%;
+  position: absolute;
+  background-color: #0f69d6;
+  top: 80px;
+  left: 150px;
+  z-index: 1;
+}
+.nav ul li{
+  padding: 6px;
+  border-bottom: 1px solid white;
+  text-align: center;
+  list-style: none;
+}
+.nav ul li a{
+  color: #ffffff;
+  font-size: 35px;
+  text-decoration: none;
+}
+.nav ul li:last-child{
+  border-bottom: none;
+}
+.header-wrapper{ 
+      display: flex;
+      flex-direction: row;
+    }
+    .logo{
+      order: 1;
+    }
+    .nav{
+      order: 3;
+    }
+    .header-center{
+      order: 2;
+    }
+.header-center .input-box{
+  width: 84%;
+  padding: 5px 0px 3px 0px;
+  border: none;
+  color:  #ffffff;
+  background-color: #0f69d6;
+  font-size: 30px;
+  outline: none;
+}
+.header-center .btn:hover,
+.add img:hover{ 
+  opacity: 0.5;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+   }
+.header-center .btn{
+  width: 15%;
+  padding: 0px 2px 4px 10px;
+  border: 0px;
+  background-color: #0f69d6;
+  vertical-align: top;
+}
+.form-group{
+  border-bottom: 1px solid white;
+}
+.header-center ::-webkit-input-placeholder{
+  font-family: DidactGothic;
+  color:  #ffffff;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 39.55px;
+}
+.nav ul li:hover a {
+    color: #cffa8f;
+    -webkit-transition: color 0.6s;
+    transition: color 0.6s;
+    }
+/*--- header end here --*/
+.main-wrapper{
+  width: 75%;
+  margin: 0 auto;
+}
+.large-box{
+  width: 61.5%;
+  border: 1px solid gray;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+.top-box{
+  margin-bottom: 15px;
+}
+.large-box img{
+  width: 100%;
+}
+.large-box-info{
+  padding: 9px 35px 18px 14px;
+  background-color: #e8e8e8;
+  position: absolute;
+  bottom: 0px;
+}
+.large-box-info p{
+  color:  #333333;
+  font-family: DidactGothic;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36.42px;
+}
+.box-group{
+  width: 37.7%;
+  display: inline-block;
+}
+.small-box{
+  margin-bottom: 3px;
+  border: 1px solid gray;
+  position: relative;
+}
+.small-box img{
+  width: 100%;
+}
+.small-box-info{
+  width: 85%;
+  padding: 8px;
+  background-color: #e8e8e8;
+  position: absolute;
+  bottom: 0px;
+}
+.small-box-info p{
+  color:  #333333;
+  font-family: OpenSans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.21px;
+}
+
+.box-list .medium-box{
+  width: 31.7%;
+  border: 1px solid gray;
+  margin: 0px 15px 15px 0px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+}
+/*.box-list li:nth-of-type(3n+3) { margin: 0; }*/
+.img-box img{
+  width: 100%;
+}
+.content{
+  position: absolute;
+  top: 45%;
+}
+.info-box{
+  min-height: 70px;
+}
+.info-box .info-title{
+  width: 30%;
+  padding: 3px;
+  background-color:  #454545;
+  color:  #ffffff;
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.info-box  p{
+  width: 85%;
+  padding: 1.2% 1% 19.4% 2%;
+  background-color: #e8e8e8;
+  color: #666666;
+  font-family: OpenSans;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20.4px;
+  text-align: left;
+}
+.add{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.add a{
+  display: inline-block;
+  width: 75%;
+}
+.add img{ width: 100% }
+@-moz-document url-prefix() {
+    .header-center .input-box {
+        padding: 5px 9% 3px 0px;
+        font-size: 25px;
+    }
+      .header-center .input-box{
+    width: 74%;
+  }
+    .info-box p{ font-size: 14px; }
+}

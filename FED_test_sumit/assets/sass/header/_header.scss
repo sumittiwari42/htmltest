@@ -1,0 +1,158 @@
+header{	
+	position: relative;
+
+	.header-top{
+		width: 100%;
+		padding-top: 20px;
+		position: absolute;
+		z-index: 1;
+		text-align: center;
+	}
+
+	nav {
+		display: inline-block;
+
+		li {
+			margin: 0px 14px;
+			display: inline-block;
+			list-style: none;
+
+			a{
+				font-size: rem(16);
+				font-family: 'Lato';
+				color: $nav-color;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			
+			a:hover {
+        
+			}
+		}
+	}
+
+	@keyframes scale {
+		0%{
+     transform: scale(1);
+		}
+		100%{
+     transform: scale(1.5);
+		}
+	}
+
+	h1{
+		margin: 0px 20px;
+		display: inline-block;
+	}
+
+	.banner{
+		position: relative;
+		top: 0px;
+
+		img { width: 100%; }
+	}
+}
+
+.flex {
+	        /* basic styling */
+        width: 350px;
+        height: 200px;
+        border: 1px solid #555;
+        font: 14px Arial;
+
+        /* flexbox setup */
+        @include display(flex);
+        @include flex-direction(row);
+}
+
+.flex div {
+	      @include flex(1);
+	      @include background(red);
+	      @include flex-shrink(1);
+	      @include flex-basis(30px);
+}
+
+.flex div:nth-child(2) {@include background(green);}
+.flex div:nth-child(3) {
+	@include flex-grow(2);
+	@include background(yellow);
+}
+.flex div:nth-child(4) {@include background(blue);}
+.flex div:nth-child(5) {
+	@include flex-basis(70px);
+	@include flex-shrink(3);
+	@include background(black);
+}
+
+.animation {
+	width: 80px;
+	height: 80px;
+	border: 1px solid green;
+	@include background(green);
+	border-radius: 50%;
+	@include border-color(red gray yellow blue);
+
+	@include hidpi(1.5) {
+  width: 40px;
+  height: 40px;
+}
+
+	&:hover{
+		 @include animation(slide 2.0s ease);
+		 animation-fill-mode: backwards;
+	}
+}
+
+@include keyframes(slide) {
+  from {
+    @include transform(translate(0px));
+  }
+  to {
+    @include transform(translate(80px));
+  }
+}
+
+$fg-column: 55px;             // Column Width
+$fg-gutter: 20px;             // Gutter Width
+$fg-max-columns: 12;          // Total Columns For Main Container
+
+.grid {
+  width: flex-grid(4);
+  height: 100px;        // returns (315px / 1020px) = 30.882353%;
+  margin-left: flex-gutter(); // returns (25px / 1020px) = 2.45098%;
+  @include background(red);
+  float: left;
+
+  p {
+    width: flex-grid(2, 4);   // returns (145px / 315px) = 46.031746%;
+    height: 50px;
+    float: left;
+    margin-left: flex-gutter(4);   // returns (25px / 315px) = 7.936508%;
+    @include background(green);
+  }
+
+   p:first-child {margin-left: 0;}
+
+  blockquote {
+    float: left;
+    width: flex-grid(2, 4);   // returns (145px / 315px) = 46.031746%;
+  }
+}
+
+.grid:first-child {margin-left: 0;}
+
+$gw-column: 100px;          // Column Width
+$gw-gutter: 40px;           // Gutter Width
+
+.grid1 {
+ width: grid-width(3);
+ height: 200px;
+ margin-left: $gw-gutter;
+ float: left;
+ background: tint(blue, 40%);;
+}
+
+button {
+  @include button(pill);
+  @include ellipsis(50%)
+}

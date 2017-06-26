@@ -1,0 +1,113 @@
+@media screen and (max-width: 1200px){
+	.header-center .input-box{
+		width: 74%;
+	}
+	.header-wrapper{width: 85%;}
+	.nav{ width: 23%;}
+	.logo { width: 25%; }
+	.large-box-info p{
+		font-size: 2.5vw;
+		line-height: 2.9vw;
+	}
+	.main-wrapper {
+    width: 85%;
+    }
+    .small-box-info p {
+    font-size: 1.4vw;
+    line-height: 1.5vw;
+    }
+    .box-group{ width: 37.3%; }
+    .box-list .medium-box { width: 31%; }
+    .info-box p {
+    font-size: 1.2vw;
+    line-height: 1.7vw;
+    }
+     .info-box  .info-title{ font-size: 1.5vw; }
+    .nav ul{ 
+    	width: 85%; 
+    	left: 7%;
+    }
+    .info-box .info-title{ width: 40%; }
+}
+
+@media screen and (min-width: 768px){
+	.box-list li:nth-of-type(3n+3) { margin: 0; }
+}
+@media screen and (max-width: 768px){
+    .box-list li:nth-of-type(2n+2) { margin: 0; }
+    .box-list .medium-box {
+     width: 47%;
+    }
+    .info-box .info-title { font-size: 2.5vw; }
+    .large-box,
+    .box-group{
+    width: 100%;
+    margin-bottom: 15px;
+    display: block; 
+    }
+    .small-box{ 
+     width: 48.9%;
+     display: inline-block;
+     }
+    .large-box-info p {
+    font-size: 4.5vw;
+    line-height: 5vw;
+    }
+    .small-box-info p {
+    font-size: 2vw;
+    line-height: 2.1vw;
+    }
+    .info-box p {
+    padding: 1.2% 1% 12.4% 2%;
+    font-size: 2.5vw;
+    line-height: 2.8vw;
+    }
+   .header-wrapper{
+   	display: block;
+   }
+  .logo{
+  	margin-bottom: 32px;
+  	float: left;
+  }
+  .nav{
+  	float: right;
+  }
+  .header-center{
+  	width: 100%;
+  	padding-bottom: 15px;
+  	display: block;
+  	clear: both;
+  }
+  .header-center{ margin-top: 0px; }
+}
+@media screen and (max-width: 480px){
+	.box-list li:nth-of-type(0n+0) { margin: 0; }
+    .small-box{
+    	width: 100%;
+    	margin-bottom: 15px;
+    	display: block;
+    }
+    .box-list .medium-box{
+    	width: 100%;
+    	margin-bottom: 15px !important;
+    	display: block;
+    }
+    .small-box-info p {
+    font-size: 3.5vw;
+    line-height: 4.1vw;
+    }
+    .info-box { min-height: 62px;}
+    .info-box .info-title { font-size: 3.5vw;}
+    .info-box p {
+    padding: 1.2% 1% 19.4% 2%;
+    font-size: 3.5vw;
+    line-height: 4.8vw;
+}
+
+/*.nav {
+    width: 23%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}*/
+}

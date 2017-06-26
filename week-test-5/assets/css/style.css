@@ -1,0 +1,515 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../Mosk_Typeface.ttf);
+}
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+/*---- hrader style start--*/
+header{
+    padding: 1px;
+    position: relative;
+    background: url(../images/Header-Dark-Blue.png);
+}
+.header-content{
+    width: 895px;
+    margin: 0 auto;
+}
+.header-content h1{
+    margin-top: 9px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+.header-content .menu-detail{
+    width: 715px;
+    float: right;
+}
+.contact-tag{ 
+    margin-top: 14px;
+    margin-bottom: 17px;
+}
+.contact-tag h2{
+    width: 279px;
+    display: inline-block;
+    vertical-align: top;
+}
+.contact-tag p{
+  font-family: myFirstFont;
+    width: 194px;
+    margin-left: 62px;
+    display: inline-block;
+    
+}
+.number{ 
+    margin-right: 12px;
+   float: right;
+}
+.contact-tag .text{
+    width: 57px;
+    color: #ffffff;
+    font: 700 14px Arial;
+}
+.top-nav{ 
+    background: url(../images/Shape-27.png);
+    background-size: 100% 100%;
+}
+.top-nav ul{ 
+    padding-left: 6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: url(images/Energy-Highlight.png);
+    background-size: 100% 100%;
+}
+.top-nav .parts{ width: 101px; }
+.top-nav li{ 
+    width: 66px;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+   /* border-right:1px solid rgba(0, 84, 164, 0.7);*/
+    display: inline-block;
+}
+
+.top-nav li a{
+    color: #ffffff;
+    font: 700 14px Arial;
+    text-decoration: none;
+}
+.top-nav li a:hover{ color: #6F7F84;; }
+.second-nav{
+    width: 698px;
+    background: url(images/Shape-28-copy.png);
+    background-size: 100% 100%;
+}
+.second-nav ul{
+    padding-left: 9px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: url(images/Energy-Highlight.png);
+    background-size: 100% 100%;
+}
+.second-nav li{
+    width: 65px;
+    padding-top: 5px;
+    padding-bottom: 9px;
+    margin-left: 4px;
+    margin-right: 4px;
+   /* border-right:1px solid rgba(0, 84, 164, 0.7);*/
+    display: inline-block;
+}
+.second-nav li a{
+    color: #60c2e6;
+    font: 700 14px Arial;
+    vertical-align: bottom;
+    text-decoration: none;
+}
+.second-nav li a:hover{ color: #8198ab; }
+.second-nav .kitchen{
+    width: 112px;
+}
+.second-nav .window{ width: 85px; }
+/*---- hrader style end--*/
+/*--- main style start here --*/
+.main{
+    padding-top: 1px;
+    padding-bottom: 16px;
+    background: url(images/Light-Blue-Base.png);
+    background-size: 100% 100%;
+}
+.banner{
+    width: 770px;
+    margin: 61px auto 33px;
+    position: relative;
+    box-shadow: 1px 6px 32px #0b0909;
+    background: url(images/White-Frame.png);
+}
+.main-banner{
+    width: 748px;
+    margin: 15px 12px;
+}
+.banner-content{
+    width: 248px;
+    padding: 13px 12px;
+    position: absolute;
+    top: 31px;
+    right: 30px;
+    background: url(images/Blue-Back.png);
+}
+.banner-content h3{
+    color: #ffffff;
+    font: 700 20px Arial;
+}
+.banner-content p{
+    color: #ffffff;
+    font: 500 16px Arial;
+    line-height: 16px;
+}
+.learn-more{
+    padding: 7px 6px 7px 8px;
+    border-radius: 10px;
+    color: #0054a4;
+    font: 700 14.84px HelveticaLTStd;
+    background-color: #ffffff;
+    line-height: 46px;
+    text-decoration: none
+}
+.learn-more:hover{ background-color: rgba(255, 255, 255, 0.65); }
+.banner-img-list{
+    padding: 12px 9px 10px;
+    position: absolute;
+    bottom: -2px;
+    background-color: white;
+}
+.banner-img-list li{
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.banner-img-list li a img:hover{ opacity: 0.6; }
+.active img{ border: 2px solid; }
+.about{
+    width: 770px;
+    margin: 0 auto;
+}
+.service img{ vertical-align: top; }
+.service{
+    width: 374px;
+    height: 81px;
+    position: relative;
+    display: inline-block;
+    background: url(../images/about-Background.png);
+    background-size: 100% 100%;
+}
+.extra-sears-club{
+    width: 374px;
+    height: 81px;
+    position: relative;
+    float:right;
+    background: url(../images/about-Background.png);
+    background-size: 100% 100%;
+}
+.service h3{
+    width: 146px;
+    margin-top: 13px;
+    display: inline-block;
+    color: #6e6e6f;
+    font: 28px HelveticaNeueLTStd;
+    font-weight: 600;
+    line-height: 24px;
+}
+.service img{
+    margin-top: -5px;
+    margin-left: 7px;
+}
+.extra-sears-club h3{
+    width: 224px;
+    margin-top: 7px;
+    display: inline-block;
+    color: #6e6e6f;
+    font: 17px HelveticaNeueLTStd;
+    font-weight: 600;
+}
+.extra-sears-club img{
+    margin-top: 5px;
+    margin-left: 13px;
+    vertical-align: bottom;
+}
+.btn{
+    position: absolute;
+    bottom: -6px;
+    right: 13px;
+    display: inline-block;
+}
+.btn .learn-more{
+    padding: 5px 5px 5px 7px;
+    color: #ffffff;
+    background: url(../images/Shape-10-copy-23.png);
+    background-size: 100% 100%;
+}
+.btn .learn-more:hover{ opacity: 0.7; }
+/*--- main style end here --*/
+/*--- footer style start ---*/
+footer{
+    background: url(../images/Footer-Dark-Blue.png);
+    background-size: 100% 100%;
+}
+.footer-content{
+    width: 695px;
+    padding-bottom: 6px;
+    margin: 0 auto;
+}
+.sear-services{
+    display: inline-block;
+    vertical-align: top;
+}
+.sear-services li,
+.about-sear-canada li,
+.credit-and-finance li{
+    margin-left: 13px;
+    margin-right: 13px;
+    list-style-type: none;
+}
+.sear-services li a,
+.about-sear-canada li a,
+.credit-and-finance li a{
+    color: #ffffff;
+    font: 400 12px Arial;
+    text-decoration: none;
+}
+.sear-services li a:hover,
+.about-sear-canada li a:hover,
+.credit-and-finance li a:hover{ color: #60e6d3; }
+.sear-services h3,
+.about-sear-canada h3,
+.credit-and-finance  h3{
+    margin-left: 12px;
+}
+.about-sear-canada{
+    display: inline-block;
+    vertical-align: top;
+}
+.credit-and-finance{
+    display: inline-block;
+    vertical-align: top;
+}
+.sign-up{
+    width: 193px;
+    display: inline-block;
+    vertical-align: top;
+}
+.sign-up-content{
+    width: 155px;
+    display: inline-block;
+}
+.sign-up img{
+    vertical-align: top;
+}
+.sign-up h3{ margin-bottom: 10px; }
+.sign-up p{
+    display: inline-block;
+    color: #ffffff;
+    font: 400 12px Arial;
+}
+footer h3{
+    color: #ffffff;
+    font: 400 14px Arial;
+    font-weight: 600;
+}
+.sign-up a{
+    padding: 7px 6px 7px 8px;
+    border-radius: 10px;
+    color: #0054a4;
+    font: 700 14.84px HelveticaLTStd;
+    background-color: #ffffff;
+    line-height: 46px;
+    text-decoration: none
+}
+.sign-up a:hover{ background-color: rgba(255, 255, 255, 0.78); }
+.sign-up a:hover{ background-color: #9d9d9d; }
+.bottom-footer{
+    width: 100%;
+    background: url(assets/images/Background.png);
+    background-size: 100% 100%;
+}
+.bottom-footer-content{
+    width: 770px;
+    margin: 0 auto;
+}
+.bottom-footer li{
+    display: inline-block;
+}
+.bottom-footer ul{
+    display: inline-block;
+}
+.bottom-footer li a{
+    padding-right: 5px;
+    border-right: 1px solid #0054a4;
+    color: #0054a4;
+    font: 400 10px Arial;
+    text-decoration: none;
+}
+.bottom-footer li a:hover{ color: #515355; }
+.bottom-footer p{
+    margin-left: 135px;
+    margin-right: 135px;
+    display: inline-block;
+    color: #0054a4;
+    font: 400 10px Arial;    
+}
+.bottom-footer .border-none{
+    border-right: none;
+}
+/*--- style footer end ---*/
+@-moz-document url-prefix() { 
+.header-content .menu-detail {
+    width: 725px;
+    }
+.top-nav li { width: 67px; }
+.service h3{ 
+    font: 21px HelveticaNeueLTStd;
+    font-weight: 600;
+    }
+.extra-sears-club h3{ 
+    font: 13px HelveticaNeueLTStd; 
+    font-weight: 600;
+    }
+.bottom-footer-content {
+    width: 795px;
+    }
+}

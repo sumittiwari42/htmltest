@@ -1,0 +1,303 @@
+/*------------------------------------------------------------------
+[Table of contents]
+* To keep an overview of structure of your code, we make use of table of 
+* content. Table of content is use display the overall tree structure of your
+* Layout. 
+* (NOTE: Remove this commented code once you start developing the code.
+* Remove the following table of content and add your own as this is just and 
+* example to let you know)
+
+1. CSS Reset Code
+1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+1.2. Clear Fix
+1.3. Font class declaration
+2. Body
+3. Header / .header
+2.1. Navigation / .navbar
+4. Content / .content
+4.1. Left column / .leftcolumn
+4.2. Right column / .rightcolumn
+4.3. Sidebar / .sidebar
+4.3.1. RSS / .rss
+4.3.2. Search / .search
+4.3.3. Boxes / .box
+4.3.4. Sideblog / .sideblog
+4.3.5. Advertisements / .ads
+5. Footer / .footer
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Color codes]
+* Mention the color code you have used in your html document for the respective
+* elements given as follow. 
+* (NOTE: Remove this commented code once you start developing the code. 
+* Remove the following color code and add your own as this is just and 
+* example to let you know)
+
+Header nav: #e5e5df (Cararra)
+Header nav a (hover): #fff (white)
+Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Typography]
+* Mention the Typography you have used in your html document for the respective
+* elements given as follow.
+* (NOTE: Remove this commented code once you start developing the code. 
+* Remove the following typography and add your own as this is just and 
+* example to let you know)
+
+Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+-------------------------------------------------------------------*/
+/* ==========================================================================
+1. CSS Reset Code
+========================================================================== */
+/* 1.1. Eric Meyers Reset
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+input[type='radio'] {
+  vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer; }
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit; }
+
+em {
+  font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle; }
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0; }
+
+sup {
+  top: -.7em; }
+
+sub {
+  bottom: -.25em; }
+
+/* 1.2. Clear Fix
+========================================================================== */
+.cf:before,
+.cf:after {
+  display: table;
+  content: " "; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+/* 1.3. Font class declaration
+========================================================================== */
+/*
+* Mention the font property (eg: font-family, font-size, font-weight, font-style
+* etc) that have been commonly used in the html document. Make a class of it and
+* apply to the element wherever it is needed. If any single property in changed,
+* then override only that property in the particular class which is used for the
+* element.
+* (NOTE: Remove this commented code once you start 
+* developing the code. Remove the following font class and add your own
+* as this is just and example to let you know. If there is only one font family
+* followed throughout the site, then menstion the font property in body. No need
+* of creating an extra class for it) */
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold; }
+
+header {
+  background: #a8ad00;
+  background: #a8ad00;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cfcfcf; }
+  header h1 {
+    float: left; }
+  header .nav {
+    float: left; }
+    header .nav li {
+      margin: 50px 13px 53px;
+      display: inline-block; }
+      header .nav li a {
+        display: inline-block;
+        color: #fff;
+        font-size: 1.125em;
+        text-decoration: none; }
+  header .donate {
+    margin-top: 42px;
+    margin-right: 32px;
+    float: right; }
+    header .donate .button-group {
+      border: 1px solid #d9d9d9;
+      border-color: #d9d9d9 #c9c9c9 #bdbdbd;
+      border-radius: 16px;
+      box-shadow: inset 0 1px 0 0 white;
+      color: #333333;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: normal;
+      line-height: 1;
+      background-color: #fff;
+      background-image: -webkit-linear-gradient(#fff, #e6e6e6);
+      background-image: linear-gradient(#fff, #e6e6e6);
+      padding: 7px 18px;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 0 -1px 1px white;
+      background-clip: padding-box;
+      border: 1px solid #d9d9d9;
+      border-color: #d9d9d9 #c9c9c9 #bdbdbd;
+      border-radius: 16px;
+      box-shadow: inset 0 1px 0 0 white;
+      color: #333333;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: normal;
+      line-height: 1;
+      background-color: #fff;
+      background-image: -webkit-linear-gradient(#fff, #e9e3e2);
+      background-image: linear-gradient(#fff, #e9e3e2);
+      padding: 7px 18px;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 0 -1px 1px white;
+      background-clip: padding-box; }
+      header .donate .button-group:hover:not(:disabled) {
+        background-color: #f4f4f4;
+        background-image: -webkit-linear-gradient(#f4f4f4, #d7d7d7);
+        background-image: linear-gradient(#f4f4f4, #d7d7d7);
+        background-clip: padding-box;
+        border: 1px solid #c9c9c9;
+        border-color: #c9c9c9 #bababa #adadad;
+        box-shadow: inset 0 1px 0 0 white;
+        cursor: pointer;
+        text-shadow: 0 -1px 1px #c7c7c7; }
+      header .donate .button-group:active:not(:disabled), header .donate .button-group:focus:not(:disabled) {
+        background: #e6e6e6;
+        border: 1px solid #b3b3b3;
+        border-bottom: 1px solid #b0b0b0;
+        box-shadow: inset 0 0 6px 3px #c8c8c8;
+        text-shadow: 0 -1px 1px #c8c8c8; }
+      header .donate .button-group:hover:not(:disabled) {
+        background-color: #f4f4f4;
+        background-image: -webkit-linear-gradient(#f4f4f4, #d7d7d7);
+        background-image: linear-gradient(#f4f4f4, #d7d7d7);
+        background-clip: padding-box;
+        border: 1px solid #c9c9c9;
+        border-color: #c9c9c9 #bababa #b8a5a2;
+        box-shadow: inset 0 1px 0 0 white;
+        cursor: pointer;
+        text-shadow: 0 -1px 1px #c7c7c7; }
+      header .donate .button-group:active:not(:disabled), header .donate .button-group:focus:not(:disabled) {
+        background: #e6e6e6;
+        border: 1px solid #b3b3b3;
+        border-bottom: 1px solid #b5adab;
+        box-shadow: inset 0 0 6px 3px #c9c7c7;
+        text-shadow: 0 -1px 1px #c8c8c8; }
+      header .donate .button-group:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+    header .donate button {
+      margin-top: 5px;
+      color: #750e2b;
+      font-size: 16px;
+      font-weight: 700; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  background: -webkit-linear-gradient(#fff, #e9e3e2);
+  background: linear-gradient(#fff, #e9e3e2);
+  border-width: 0; }
+
+/*banner styling*/
+.banner {
+  width: 100%;
+  position: relative; }
+  .banner img {
+    width: 100%; }
+  .banner .banner-content {
+    position: absolute;
+    bottom: 70px;
+    left: 35px;
+    text-align: center; }
+    .banner .banner-content h2 {
+      color: #fff;
+      font: 700 48px 'Indie Flower', cursive;
+      text-shadow: 0px 1px 0.99px rgba(0, 0, 0, 0.75); }
+
+main .community-program {
+  width: 75%;
+  margin: 0 auto 50px;
+  padding-top: 50px;
+  text-align: center; }
+  main .community-program h2 {
+    margin-bottom: 25px;
+    color: #000;
+    font-family: ProximaNova;
+    font-size: 48px; }
+  main .community-program p {
+    color: #000;
+    font: 400 18px/32px 'ProximaNova'; }
+main .program-nav {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: #a8ad00; }
+  main .program-nav ul {
+    text-align: center; }
+  main .program-nav li {
+    margin: 40px 13px 43px;
+    display: inline-block; }
+    main .program-nav li a {
+      display: inline-block;
+      color: #000;
+      font-size: 1.125em;
+      text-decoration: none; }
+main .objectives h2 {
+  margin-bottom: 10px;
+  color: #a8ad00;
+  font: 700 38px ProximaNova;
+  text-align: center;
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=style.css.map */

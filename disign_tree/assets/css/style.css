@@ -1,0 +1,494 @@
+/*------------------------------------------------------------------
+[Table of contents]
+* To keep an overview of structure of your code, we make use of table of 
+* content. Table of content is use display the overall tree structure of your
+* Layout. 
+* (NOTE: Remove this commented code once you start developing the code.
+* Remove the following table of content and add your own as this is just and 
+* example to let you know)
+
+1. CSS Reset Code
+1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+1.2. Clear Fix
+1.3. Font class declaration
+2. Body
+3. Header / .header
+2.1. Navigation / .navbar
+4. Content / .content
+4.1. Left column / .leftcolumn
+4.2. Right column / .rightcolumn
+4.3. Sidebar / .sidebar
+4.3.1. RSS / .rss
+4.3.2. Search / .search
+4.3.3. Boxes / .box
+4.3.4. Sideblog / .sideblog
+4.3.5. Advertisements / .ads
+5. Footer / .footer
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Color codes]
+* Mention the color code you have used in your html document for the respective
+* elements given as follow. 
+* (NOTE: Remove this commented code once you start developing the code. 
+* Remove the following color code and add your own as this is just and 
+* example to let you know)
+
+Header nav: #e5e5df (Cararra)
+Header nav a (hover): #fff (white)
+Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Typography]
+* Mention the Typography you have used in your html document for the respective
+* elements given as follow.
+* (NOTE: Remove this commented code once you start developing the code. 
+* Remove the following typography and add your own as this is just and 
+* example to let you know)
+
+Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+-------------------------------------------------------------------*/
+/* ==========================================================================
+1. CSS Reset Code
+========================================================================== */
+/* 1.1. Eric Meyers Reset
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+input[type='radio'] {
+  vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer; }
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit; }
+
+em {
+  font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle; }
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0; }
+
+sup {
+  top: -.7em; }
+
+sub {
+  bottom: -.25em; }
+
+/* 1.2. Clear Fix
+========================================================================== */
+.cf:before,
+.cf:after {
+  display: table;
+  content: " "; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+/* 1.3. Font class declaration
+========================================================================== */
+/*
+* Mention the font property (eg: font-family, font-size, font-weight, font-style
+* etc) that have been commonly used in the html document. Make a class of it and
+* apply to the element wherever it is needed. If any single property in changed,
+* then override only that property in the particular class which is used for the
+* element.
+* (NOTE: Remove this commented code once you start 
+* developing the code. Remove the following font class and add your own
+* as this is just and example to let you know. If there is only one font family
+* followed throughout the site, then menstion the font property in body. No need
+* of creating an extra class for it) */
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold; }
+
+header {
+  background-image: url("../../assets/images/top-nav-bg.png"); }
+
+header .wrapper {
+  width: 80%;
+  margin: 0 auto;
+  background: url(../../assets/images/shine_effect.png); }
+
+header h1 {
+  display: inline-block;
+  margin-left: 12px;
+  position: absolute;
+  z-index: 1;
+  box-shadow: gray 1px 3px 13px; }
+header nav {
+  padding: 12px 18px;
+  display: inline-block;
+  float: right; }
+  header nav ul li {
+    padding: 6px 10px;
+    margin-left: 20px;
+    display: inline-block;
+    text-transform: uppercase; }
+  header nav ul li:hover {
+    border-color: #011581;
+    background: linear-gradient(0deg, #011581 0%, #4758b2 100%);
+    border-radius: 16px; }
+    header nav ul li:hover a {
+      -webkit-font: 700 15px "Myriad Pro";
+      -moz-font: 700 15px "Myriad Pro";
+      font: 700 15px "Myriad Pro";
+      text-decoration: none; }
+
+header nav ul li:hover a {
+  color: #fff; }
+
+.banner .wrapper {
+  width: 80%;
+  margin: 0 auto;
+  position: relative; }
+
+.banner-slider {
+  width: 50%;
+  padding-bottom: 70px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-image: url("../../assets/images/slide-bg.png"); }
+  .banner-slider .banner-content {
+    width: 75%;
+    float: right; }
+  .banner-slider h2 {
+    margin-top: 40px;
+    -webkit-font: 700 40px "Myriad Pro";
+    -moz-font: 700 40px "Myriad Pro";
+    font: 700 40px "Myriad Pro";
+    color: #0e218a; }
+  .banner-slider p {
+    margin-top: 16px;
+    -webkit-font: 400 13px "Myriad Pro";
+    -moz-font: 400 13px "Myriad Pro";
+    font: 400 13px "Myriad Pro";
+    color: #777; }
+  .banner-slider .btn {
+    display: inline-block;
+    padding: 8px 11px;
+    margin-top: 28px;
+    border-radius: 2px;
+    border: 1px solid #011581;
+    background: linear-gradient(0deg, #011581 0%, #4c5cb3 100%);
+    color: #fff;
+    -webkit-font: 700 24px "Myriad Pro";
+    -moz-font: 700 24px "Myriad Pro";
+    font: 700 24px "Myriad Pro";
+    text-decoration: none; }
+  .banner-slider .btn:hover {
+    color: #011581;
+    background: linear-gradient(0deg, #ffffff 0%, rgba(76, 92, 179, 0.26) 100%); }
+
+main {
+  background: #f4f1e0; }
+  main .wrapper {
+    width: 80%;
+    margin: 0 auto; }
+
+.blog-section {
+  width: 35%;
+  padding-bottom: 15px;
+  position: absolute;
+  background: #fff;
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.3); }
+  .blog-section .blog-heading {
+    width: 90%;
+    margin: -24px auto 0;
+    position: relative;
+    background: url("../../assets/images/fold-bg.png");
+    box-shadow: gray 3px 5px 16px; }
+    .blog-section .blog-heading .blog-btn {
+      position: absolute;
+      right: 19px;
+      top: 9px; }
+    .blog-section .blog-heading h3 {
+      padding: 10px 18px;
+      -webkit-font: 700 20px "Myriad Pro";
+      -moz-font: 700 20px "Myriad Pro";
+      font: 700 20px "Myriad Pro";
+      color: #0e218a;
+      text-transform: uppercase; }
+  .blog-section .blog-img {
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top; }
+  .blog-section .blog-content {
+    width: 45%;
+    display: inline-block; }
+    .blog-section .blog-content h4 {
+      -webkit-font: 700 18px "Myriad Pro";
+      -moz-font: 700 18px "Myriad Pro";
+      font: 700 18px "Myriad Pro";
+      color: #0e218a; }
+    .blog-section .blog-content .post-info {
+      -webkit-font: 400 10px "Myriad Pro";
+      -moz-font: 400 10px "Myriad Pro";
+      font: 400 10px "Myriad Pro";
+      color: #c0bb9a; }
+  .blog-section .blog-box {
+    padding-bottom: 25px;
+    margin-top: 25px; }
+  .blog-section .first {
+    margin-top: 42px; }
+  .blog-section .post-detail {
+    margin-top: 5px;
+    -webkit-font: 400 13px "Myriad Pro";
+    -moz-font: 400 13px "Myriad Pro";
+    font: 400 13px "Myriad Pro";
+    color: #777; }
+  .blog-section .read-more {
+    text-align: right; }
+    .blog-section .read-more .read-btn {
+      padding: 3px 6px;
+      border-radius: 2px;
+      border: 1px solid #091c86;
+      background: linear-gradient(0deg, #0e218a 0%, #4758b0 100%);
+      color: #fff; }
+    .blog-section .read-more .read-btn:hover {
+      color: #011581;
+      background: linear-gradient(0deg, #ffffff 0%, rgba(76, 92, 179, 0.26) 100%); }
+
+.side-content-section {
+  width: 50%;
+  float: right;
+  position: relative; }
+  .side-content-section h4 {
+    margin-top: 36px;
+    -webkit-font: 700 24px "Myriad Pro";
+    -moz-font: 700 24px "Myriad Pro";
+    font: 700 24px "Myriad Pro";
+    color: #0e218a; }
+  .side-content-section .content-box {
+    width: 45%;
+    margin: 21px 10px 4px 10px;
+    display: inline-block; }
+    .side-content-section .content-box .content {
+      margin-top: 10px;
+      -webkit-font: 400 13px "Myriad Pro";
+      -moz-font: 400 13px "Myriad Pro";
+      font: 400 13px "Myriad Pro";
+      color: #777; }
+  .side-content-section .head-img {
+    display: inline-block;
+    vertical-align: top; }
+  .side-content-section h5 {
+    width: 45%;
+    display: inline-block;
+    color: #a19c80;
+    -webkit-font: 700 14px "Myriad Pro";
+    -moz-font: 700 14px "Myriad Pro";
+    font: 700 14px "Myriad Pro"; }
+  .side-content-section .read-more {
+    text-align: right; }
+  .side-content-section .more-btn {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 2px;
+    border: 1px solid  #b7b49f;
+    background: linear-gradient(0deg, #e9e7d8 0%, #f9f8f2 100%);
+    box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.21); }
+  .side-content-section .more-btn:hover {
+    color: #011581;
+    background: linear-gradient(0deg, #ffffff 0%, rgba(76, 92, 179, 0.26) 100%); }
+
+.tweet-box {
+  margin-top: 20px;
+  padding-bottom: 18px; }
+
+.tweet-head .tweet-img {
+  display: inline-block;
+  vertical-align: top; }
+.tweet-head h5 {
+  display: inline-block;
+  -webkit-font: 700 20px "Myriad Pro";
+  -moz-font: 700 20px "Myriad Pro";
+  font: 700 20px "Myriad Pro";
+  color: #539fc7; }
+  .tweet-head h5 span {
+    display: block; }
+
+.tweets li {
+  margin-top: 10px;
+  list-style: none; }
+.tweets p {
+  -webkit-font: 400 13px "Myriad Pro";
+  -moz-font: 400 13px "Myriad Pro";
+  font: 400 13px "Myriad Pro";
+  color: #777; }
+  .tweets p a {
+    color: #0e218a;
+    text-decoration: none; }
+.tweets span {
+  -webkit-font: 400 13px "Myriad Pro";
+  -moz-font: 400 13px "Myriad Pro";
+  font: 400 13px "Myriad Pro";
+  color: #777; }
+
+.slide-btn {
+  position: absolute;
+  top: -27px;
+  left: calc(70%);
+  background: url("../../assets/images/arrow-bg.png"); }
+  .slide-btn a {
+    display: inline-block;
+    padding: 6px 17px; }
+
+footer {
+  padding-top: 50px;
+  background: #0d1a61; }
+  footer .wrapper {
+    width: 80%;
+    margin: 0 auto; }
+  footer h4 {
+    -webkit-font: 700 30px "Myriad Pro";
+    -moz-font: 700 30px "Myriad Pro";
+    font: 700 30px "Myriad Pro";
+    color: #fff;
+    letter-spacing: -0.75px;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5); }
+  footer p {
+    margin-top: 14px;
+    -webkit-font: 400 13px "Myriad Pro";
+    -moz-font: 400 13px "Myriad Pro";
+    font: 400 13px "Myriad Pro";
+    color: #fff; }
+  footer .text-widget {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top; }
+    footer .text-widget .read-more {
+      margin-top: 40px;
+      text-align: right; }
+    footer .text-widget .more-btn {
+      display: inline-block;
+      padding: 6px 10px 5px;
+      border-radius: 2px;
+      border: 1px solid #060c2e;
+      -webkit-font: 700 14px "Myriad Pro";
+      -moz-font: 700 14px "Myriad Pro";
+      font: 700 14px "Myriad Pro";
+      background: linear-gradient(0deg, #e8e5d0 0%, #ffffff 100%);
+      color: #0e218a;
+      text-transform: uppercase; }
+  footer .get-in-touch {
+    width: 20%;
+    display: inline-block;
+    margin: 0px 15px 0px 35px;
+    vertical-align: top; }
+    footer .get-in-touch li {
+      margin-top: 8px;
+      list-style: none; }
+      footer .get-in-touch li .social-text {
+        margin-left: 6px;
+        display: inline-block;
+        -webkit-font: 400 14px "Myriad Pro";
+        -moz-font: 400 14px "Myriad Pro";
+        font: 400 14px "Myriad Pro";
+        color: #fff;
+        text-decoration: none; }
+  footer .form {
+    margin-top: 12px;
+    position: relative; }
+  footer .contact {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top; }
+    footer .contact .input-box {
+      width: 40%;
+      display: block;
+      padding: 7px;
+      margin-top: 8px;
+      border-radius: 4px;
+      outline: none;
+      border: none; }
+    footer .contact .text-area {
+      width: 50%;
+      display: block;
+      padding: 6px;
+      border-radius: 4px;
+      outline: none;
+      border: none;
+      position: absolute;
+      top: 0px;
+      right: 0px; }
+    footer .contact .btn {
+      display: inline-block;
+      padding: 6px 25px 5px;
+      margin-top: 10px;
+      border-radius: 2px;
+      border: 1px solid #060c2e;
+      -webkit-font: 700 14px "Myriad Pro";
+      -moz-font: 700 14px "Myriad Pro";
+      font: 700 14px "Myriad Pro";
+      background: linear-gradient(0deg, #e8e5d0 0%, #ffffff 100%);
+      color: #0e218a;
+      text-transform: uppercase; }
+  footer .footer-bottom {
+    padding: 16px 0px;
+    margin-top: 16px;
+    background: url("../../assets/images/footer-bg.png"); }
+    footer .footer-bottom .footer-text {
+      display: inline-block; }
+    footer .footer-bottom .footer-nav {
+      float: right;
+      margin-right: 40px; }
+      footer .footer-bottom .footer-nav li {
+        display: inline-block;
+        margin: 0px 30px; }
+        footer .footer-bottom .footer-nav li a {
+          display: inline-block;
+          -webkit-font: 400 12px "Myriad Pro";
+          -moz-font: 400 12px "Myriad Pro";
+          font: 400 12px "Myriad Pro";
+          color: #fff;
+          text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.19);
+          text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */

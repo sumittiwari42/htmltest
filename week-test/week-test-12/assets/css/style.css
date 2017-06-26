@@ -1,0 +1,496 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+/*.cf { *zoom: 1; }*/
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.container {
+  background: url(../images/bg.png);
+/*  background-size: 100% 100%;*/
+}
+
+a { display: inline-block; }
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+/*-- header style start here --*/
+
+.neaklodean {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.top-right { 
+  margin-bottom: 12px;
+  float: right; 
+}
+
+.btn-group { 
+  padding: 9px 9px 10px 10px;
+  display: inline-block; 
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-group button {
+  border: 0px;
+  border-radius: 0px;
+  background-color: #ed2724;
+  color:  #ffffff;
+  font: 700 10px/22px 'OpenSans';
+}
+
+.logo,
+.watch-neaklodean { 
+  margin-bottom: 12px;
+  text-align: right; 
+}
+
+.watch-neaklodean  { padding-right: 45px; }
+
+h1 { display: inline-block; }
+
+.main-wrapper { 
+  padding: 1px;
+  background-color: rgba(36, 6, 5, 0.8); 
+}
+
+.nav li { 
+  margin: 0px 2px;
+  display: inline-block; 
+}
+
+.nav { 
+  width: 90%;
+  margin: 20px auto 4px;
+  background-color: black; 
+}
+
+.nav li a {
+  color:  #ffffff;
+  font: 400 18px/40px "PassionOne";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.main-content { 
+  width: 60%;
+  margin-left: 14px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tweet { position: relative; }
+.tweet .tweet-img { width: 100%; }
+
+.tweet-content p {
+  width: 80%;
+  position: absolute;
+  top: 0px;
+  right: 4px;
+  color:  #333;
+  font: 400 12px/18px 'Latha';
+}
+
+.tweet-content p span{ 
+  color: #cb181f; 
+  font-style: italic;
+}
+
+.user-list li { display: inline-block; }
+
+.tweet-feed { 
+  padding: 8px;
+  float: right; 
+}
+
+.user-list { 
+  position: relative;
+  bottom: 14px;
+  left: 67px; 
+}
+
+.main-heading { 
+  margin-bottom: 28px;
+  background: url(../images/layerbl.png); 
+}
+
+.main-heading h2 { 
+  padding-left: 10px;
+  display: inline-block; 
+  color:  #ffffff;
+  font: 400 26px/40px 'PassionOne';
+
+}
+
+.date {
+  color:  #fff;
+  font: 700 11px/10px 'Lato';
+}
+
+.comment-box h3 a {
+  color: #ed2724;
+  font: 400 14px/16px 'Trebuchet MS';
+  text-decoration: none;
+}
+.comment-box h3{ margin-bottom: 14px; }
+
+.comment-pic {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.comment-content {
+  width: 60%;
+  padding-left: 6px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.content { background-color: rgba(36, 6, 5, 0.42); }
+.comment-content a { display: block; }
+
+.comment-box { 
+  padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+.social-pannel { 
+  margin-bottom: 24px;
+  background-color: rgba(255, 0, 0, 0.79); 
+}
+
+.social-pannel li,
+.share,
+.share p,
+.comment-count,
+.social-pannel ul { display: inline-block; }
+
+.comment-count p,
+.share p{
+  padding: 4px 10px;
+  color:  #fefefe;
+  font: 700 12px/24px 'Lato';
+}
+
+.comment-content p a {
+  color:  #f9ab60;
+  font: 400 12px/18px 'Trebuchet MS';
+  text-decoration: none;
+ }
+
+.comment-content p {  
+  color:  #fff;
+  font: 400 12px/18px 'Trebuchet MS';
+}
+
+.comment-pic img { width: 100%; }
+.comment-count { background-color: #ed2724; }
+
+.sidebar { 
+  width: 35%;
+  margin-left: 14px;
+  display: inline-block;
+  vertical-align: top;
+ }
+
+.ad { margin-bottom: 20px; }
+.ad img { width: 100% }
+.fb-like { margin-bottom: 20px; }
+.fb-like img { width: 100%; }
+
+.tour-info { 
+  padding: 12px;
+  margin-bottom: 2px;
+  background-color: #330907; 
+}
+
+.location p {
+  color:  #ffffff;
+  font: 700 14px/18px 'Lato';
+}
+
+.downarrow{     
+  width: 24px;
+  margin: 1px 1px 6px 0px; 
+}
+
+.ticket button { 
+  width: 75px;
+  border: 0px;
+  margin-bottom: 2px;
+  display: block;
+  color:  #ffffff;
+  background-color: #ed2724;
+  font: 400 14px/18px 'Lato'; 
+}
+
+.ticket .vip{ background-color: #f9ab60; }
+
+.side-head { 
+  margin-bottom: 0px; 
+  text-align: left;
+}
+
+.calender,
+.location,
+.ticket { 
+  margin-left: 18px;
+  display: inline-block; 
+  vertical-align: middle;
+}
+
+.side-box,
+.content { border-bottom: 19px solid black; }
+
+.more button {
+  border: 0px;
+  position: relative;
+  top: -12px;
+  right: 12px;
+  background-color: #f9ab60;
+  color:  #c7211e;
+  font: 700 10px/22px 'Lato';
+}
+
+.more button img{ margin: 0px 1px 2px 3px; }
+
+.featured { text-align: center; }
+.featured-img { margin: 14px 0px; }
+.more { text-align: right; }
+.last-pannel { margin-bottom: 4px; }
+
+/*--- footer style start --*/
+footer { background-color: #000; }
+
+.footer-wrapper { 
+  padding: 22px 0px 10px 0px;
+  text-align: center;
+}
+
+.footer-nav li { 
+  border-right: 1px solid black;
+  display: inline-block; 
+}
+
+.footer-nav {
+  margin-bottom: 14px;
+ background-color: #393939;
+}
+
+.footer-nav li a {
+  padding: 3px 12px 4px 3px;
+  color:  #fff;
+  font: 700 18px/40px 'PassionOne';
+  text-decoration: none;
+}
+
+.connect p { 
+  display: inline-block; 
+  color:  #fff;
+  font: 700 13px/18px 'Lato';
+}
+
+.connect { 
+  position: relative; 
+  margin-bottom: 20px;
+}
+
+footer p {
+  color:  #fff;
+  font: 400 11px/14px 'Arial';
+}
+
+.my-play { 
+  position: absolute;
+  right: 12%;
+ }
+
+footer p a,
+footer p span{ 
+  color: #c7211e; 
+  text-decoration: none;
+}
+
+.last-mav a { 
+  padding: 0px 5px 1px 1px;
+  border-right: 1px solid gray; 
+}
+
+.last-mav .last-child{ border-right: none; }
+
+.btn-group button:hover { 
+  background-color: rgba(237, 39, 36, 0.68);
+ }
+
+ .nav li:hover a,
+ .footer-nav li:hover a { text-decoration: underline; }
+ .comment-content p a:hover { color: rgba(249, 171, 96, 0.53); }
+ .connect img:hover,
+ .social-pannel img:hover,
+ .vip:hover,
+ .ticket-categry:hover,
+ .watch-neaklodean img:hover,
+ .neaklodean img:hover { opacity: 0.7; }
+ .bottom-footer a:hover,
+ .comment-box h3 a:hover{ text-decoration: underline; }
+ .more button:hover {    
+    background-color: rgb(249, 171, 96);
+    color: rgb(162, 36, 34); 
+ }

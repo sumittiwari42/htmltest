@@ -1,0 +1,49 @@
+header {
+	background-image: url("../../assets/images/top-nav-bg.png");
+}
+
+header .wrapper { 
+	width: 80%;
+	margin: 0 auto; 
+	background: url(../../assets/images/shine_effect.png);
+}
+
+header {
+	h1 { 
+		display: inline-block;
+		margin-left: 12px; 
+		position: absolute;
+		z-index: 1;
+		box-shadow: gray 1px 3px 13px;
+	}
+
+	nav { 
+		padding: 12px 18px;;
+		display: inline-block;
+		float: right;
+
+		ul {
+			li { 
+				padding: 6px 10px;
+				margin-left: 20px;
+				display: inline-block;
+				text-transform: uppercase; 
+			}
+		}
+
+		ul {
+			li:hover{
+				border-color: #011581;
+				background: linear-gradient(0deg, #011581 0%, #4758b2 100%);
+				border-radius: 16px;
+
+				a { 
+					@include font(700, 15px, 'Myriad Pro');
+					text-decoration: none;
+				}
+			}
+		} 
+	}
+}
+
+header nav ul li:hover a { color: #fff; }
